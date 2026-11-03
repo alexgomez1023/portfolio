@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Handoff: Portfolio home page refresh + project detail pages
 
 ## Overview
@@ -109,3 +110,6 @@ Top to bottom:
 
 ## Suggested prompt for Claude Code
 > Read design_handoff_portfolio/README.md and implement it in this site: rebuild the home page Projects section (option 4a), create the three project detail pages from the template, apply the paper-frame image treatment, and replace the two sketches in svgs.js. Keep everything in plain HTML/CSS/JS using the existing classes and CSS variables.
+=======
+# Alex Gomez Portfolio Website
+>>>>>>> 3acf4a769c3b0404e093c4397d6aab1251e3ac49
