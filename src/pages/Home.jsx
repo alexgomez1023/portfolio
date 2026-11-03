@@ -138,7 +138,7 @@ export default function Home() {
             <article className="past-project">
               <Sketch
                 paper="sage"
-                caption="Mock Repogramming Tool Visual"
+                caption="Repogramming Tool Visual"
                 rotate={1}
                 tapeX="40%"
                 tapeR={-3}
