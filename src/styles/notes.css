@@ -21,7 +21,7 @@ a {
   font-family: "Caveat", cursive;
   font-size: 1.4rem;
   color: var(--note-ink, #1f1d18);
-  background: var(--paper, #b0aa82);
+  /* background (paper color + texture) is set in styles.css */
   transform: rotate(var(--r, 0));
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
   position: relative;

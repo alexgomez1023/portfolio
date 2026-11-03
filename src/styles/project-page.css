@@ -37,7 +37,7 @@
   top: -9px;
   z-index: 2; /* keep the tape above the screenshot */
 }
-/* lift screenshots above the paper-texture overlay (.sketch::after) so they stay crisp */
+/* keep screenshots in their own stacking layer under the tape */
 .sketch.phone img,
 .sketch.phone .phone-placeholder {
   position: relative;

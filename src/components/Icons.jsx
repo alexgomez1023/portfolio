@@ -6,13 +6,7 @@ export function SvgDefs() {
   return (
     <svg className="svg-defs" aria-hidden="true">
       <defs>
-        {/* paper texture */}
-        <filter id="paper" x="0" y="0" width="100%" height="100%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" seed="2" result="noise" />
-          <feDiffuseLighting in="noise" lightingColor="#fff" surfaceScale="2">
-            <feDistantLight azimuth="45" elevation="60" />
-          </feDiffuseLighting>
-        </filter>
+        {/* the paper texture is now baked into src/assets/paper*.webp (see styles.css) */}
         {/* small wobble for the icons */}
         <filter id="rough-icon" x="-15%" y="-15%" width="130%" height="130%">
           <feTurbulence type="fractalNoise" baseFrequency="0.16" numOctaves="2" seed="7" result="noise" />

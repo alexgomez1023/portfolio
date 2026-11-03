@@ -41,36 +41,26 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: var(--bg);
   color: var(--ink);
   font-size: 17px;
   line-height: 1.6;
 }
-/* paper texture from the #paper svg filter. The notes and sketches get their
-   own copy so they don't look see-through */
-body::before,
-.site-header::before,
-.note::after,
-.sketch::after {
-  content: "";
-  inset: 0;
-  pointer-events: none;
-  filter: url(#paper);
-  mix-blend-mode: multiply;
-  opacity: 0.6;
+/* Paper texture. These tiles are the old #paper SVG filter rendered once
+   (paper.webp at 60% strength, paper-light.webp at 45%). Blending a static
+   image into the element's own background is cheap. The old live filter on
+   a fixed, mix-blend-mode overlay had to be redrawn on every scroll frame,
+   which left blank patches on phones. */
+body,
+.site-header {
+  background-color: var(--bg);
+  background-image: url("../assets/paper.webp");
+  background-blend-mode: multiply;
 }
-body::before {
-  position: fixed;
-  z-index: -1;
-}
-.site-header::before {
-  position: absolute;
-  z-index: -1;
-}
-.note::after,
-.sketch::after {
-  position: absolute;
-  opacity: 0.45;
+.note,
+.sketch {
+  background-color: var(--paper, #b0aa82);
+  background-image: url("../assets/paper-light.webp");
+  background-blend-mode: multiply;
 }
 main {
   flex: 1;
@@ -112,7 +102,6 @@ ul {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: var(--bg);
 }
 /* squiggle dividers */
 .site-header::after,
@@ -257,7 +246,6 @@ ul {
   position: relative;
   margin: 0;
   padding: 22px 18px 12px;
-  background: var(--paper, #b0aa82);
   color: var(--note-ink);
   transform: rotate(var(--r, 0));
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
