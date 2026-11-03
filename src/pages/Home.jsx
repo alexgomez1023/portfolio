@@ -121,7 +121,7 @@ export default function Home() {
             <article className="past-project">
               <Sketch
                 paper="straw"
-                caption="simplified version, the real data is internal"
+                caption="DAG Dependency Graph Visual"
                 rotate={-1.5}
                 tapeX="50%"
                 tapeR={3}
@@ -138,14 +138,14 @@ export default function Home() {
             <article className="past-project">
               <Sketch
                 paper="sage"
-                caption="pick a module, load the firmware, flash"
+                caption="Mock Repogramming Tool Visual"
                 rotate={1}
                 tapeX="40%"
                 tapeR={-3}
               >
                 <FlashSketch />
               </Sketch>
-              <h3>Embedded Reprogramming Tool</h3>
+              <h3>Reprogramming Tool</h3>
               <p className="meta-line">Collins Aerospace, Summer 2025</p>
               <ScribLink
                 to="/projects/reprogramming-tool"
