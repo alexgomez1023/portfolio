@@ -56,8 +56,8 @@ export default function Home() {
             tapeR={-4}
           />
           <Note
-            to="/projects/recipeflow"
-            title="RecipeFlow"
+            to="/projects/skim"
+            title="Skim"
             meta="My own app"
             index={2}
             paper="peach"
@@ -100,7 +100,7 @@ export default function Home() {
 
           <div className="featured">
             <div>
-              <h3>RecipeFlow</h3>
+              <h3>Skim</h3>
               <p className="meta-line">My own app</p>
               <p>
                 A recipe and meal planning app I'm building for iOS and Android.
@@ -108,7 +108,7 @@ export default function Home() {
                 recipe websites.
               </p>
             </div>
-            <ScribLink to="/projects/recipeflow" className="hand-link">
+            <ScribLink to="/projects/skim" className="hand-link">
               read the full story <Arrow />
             </ScribLink>
           </div>

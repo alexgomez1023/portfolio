@@ -6,7 +6,7 @@ import ScribLink from "./ScribLink.jsx";
 // you put inside, then a sticky note pointing to the next project.
 //
 // <ProjectPage
-//   title="RecipeFlow"
+//   title="Skim"
 //   subtitle="Personal project"
 //   description="..."                                     -> search results / link previews
 //   next={{ to: "/projects/cert-tracker", title: "...", paper: "straw", rotate: -2 }}

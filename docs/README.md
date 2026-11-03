@@ -2,7 +2,7 @@
 
 ## Overview
 Alex Gomez's portfolio (static HTML/CSS/JS: `index.html`, `styles.css`, `notes.css`, `svgs.js`, `theme.js`, `scrib.js`) is getting:
-1. A **new Projects section on the home page**. The long write-ups move off the home page. RecipeFlow is featured under "what I'm building now", and the two Collins Aerospace internships sit under "before that".
+1. A **new Projects section on the home page**. The long write-ups move off the home page. Skim is featured under "what I'm building now", and the two Collins Aerospace internships sit under "before that".
 2. **A detail page for each project** (3 pages), all built from one template. Each section heading is a question a recruiter would ask.
 3. **One image treatment everywhere:** every project image sits on the project's paper color with tape and a caption area. The only exception is the profile photo in the home hero, which stays as it is today.
 4. **New sketches** for the two internship projects.
@@ -23,14 +23,14 @@ Every project image (sketch, diagram, screenshot) uses the existing `.sketch` fi
 - `background: var(--paper)`, using the project's paper color:
   - Software Certification Tracker → `--paper-straw` `#d9d0a0`
   - Embedded Reprogramming Tool → `--paper-sage` `#bccdc8`
-  - RecipeFlow → `--paper-peach` `#e3c2a4`
+  - Skim → `--paper-peach` `#e3c2a4`
 - Padding `22px 18px 12px` (smaller images ~8–14px), `transform: rotate(var(--r))`, typically between -2deg and 2deg
 - Shadow `0 8px 15px rgba(0,0,0,.15)`
 - Tape: the existing `::before` (80×24px, `rgba(255,255,255,.6)`, positioned by `--tape-x` and rotated by `--tape-r`)
 - The paper texture `::after` overlay (`filter: url(#paper)`) stays on
 - **Caption area:** `<figcaption>` (Caveat, 1.2rem, centered, opacity .75). The existing `.sketch figcaption` style works.
 - **Exception:** the **hero sketch at the top of each detail page has no caption**. Teammate feedback: it read as generic, so leave it out.
-- **Phone screenshots** (RecipeFlow) also go on peach paper, not white. Each phone is its own small paper frame: padding ~8px 8px 4px, the screenshot inside at `aspect-ratio: 9/19; object-fit: cover`, and a caption below. This replaces `.snapshot.phone`'s white frame for project images only.
+- **Phone screenshots** (Skim) also go on peach paper, not white. Each phone is its own small paper frame: padding ~8px 8px 4px, the screenshot inside at `aspect-ratio: 9/19; object-fit: cover`, and a caption below. This replaces `.snapshot.phone`'s white frame for project images only.
 - **Profile photo (home hero):** no change. Keep `.snapshot.square` (white `--photo-frame`, one piece of tape, -4deg). It's the only white-framed image on the site, and it appears only in the home hero, never on detail pages.
 - The **red pen** (`--pen-red`, `.mark`) is used sparingly or not at all. The new tracker sketch uses none. There are no red-pen notes on screenshots.
 
@@ -38,14 +38,14 @@ Every project image (sketch, diagram, screenshot) uses the existing `.sketch` fi
 Header, hero and footer **stay as they are today**:
 - Header: brand, nav (Projects, Résumé), LinkedIn/GitHub icons, theme button
 - Hero: photo (3a, unchanged), H1, intro, and the board of three sticky notes
-- The **sticky notes now link to the detail pages** (`cert-tracker.html`, `reprogramming-tool.html`, `recipeflow.html`, or `/projects/<slug>/`, whichever you prefer) instead of `#anchors`
+- The **sticky notes now link to the detail pages** (`cert-tracker.html`, `reprogramming-tool.html`, `skim.html`, or `/projects/<slug>/`, whichever you prefer) instead of `#anchors`
 - Footer unchanged
 
 **Projects section** (replaces the three long `<article class="project">` blocks):
 - Keep `<section class="projects" id="projects">` with its `<h2>Projects</h2>` and accent squiggle
 - **Group 1: "what I'm building now"**. A Caveat label (1.35rem, `--muted`), then:
-  - A centered row of **3 RecipeFlow phone screenshots** in peach paper frames (each ~180–200px wide at desktop), rotated about -3deg / 1.5deg / -1deg, with the middle one dropped ~24px. Each has a caption.
-  - Below: `h3` "RecipeFlow" (Instrument Serif 2rem), meta "My own app" (Caveat, `--accent`), a 1–2 sentence summary, and "read the full story →" (Caveat, `--accent`) linking to the detail page
+  - A centered row of **3 Skim phone screenshots** in peach paper frames (each ~180–200px wide at desktop), rotated about -3deg / 1.5deg / -1deg, with the middle one dropped ~24px. Each has a caption.
+  - Below: `h3` "Skim" (Instrument Serif 2rem), meta "My own app" (Caveat, `--accent`), a 1–2 sentence summary, and "read the full story →" (Caveat, `--accent`) linking to the detail page
 - **Group 2: "before that"**. A Caveat label, then a 2-column grid (`minmax(0,1fr)` × 2, gap ~44px):
   - Each column: the project's sketch in its paper frame with a caption, then `h3` title (Instrument Serif ~1.5rem), meta "Collins Aerospace, Summer 2026" / "Summer 2025" (Caveat, `--accent`), then "read more →"
   - Left: Software Certification Tracker (straw, sketch `sketch-cert`). Right: Embedded Reprogramming Tool (sage, sketch `sketch-flash`).
@@ -62,18 +62,18 @@ Top to bottom:
 3. **Hero sketch**: full-width paper frame (project color), rotated about ±1deg, tape centered. **No caption.** Use the same sketch as the home page (larger).
 4. **Facts row**: a 3-column grid. Each cell has a small Caveat label (`--muted`, ~1.1rem) above a short value (body font, ~0.95rem).
    - Internship: role / stack / result (e.g. "SWE intern" / "React, FastAPI, MySQL" / "lookups 20 min → 2")
-   - RecipeFlow: platforms / stack / links ("iOS + Android" / "React Native, FastAPI, MySQL" / "GitHub →")
+   - Skim: platforms / stack / links ("iOS + Android" / "React Native, FastAPI, MySQL" / "GitHub →")
    - **Borders:** the site's **squiggle line** above and below the row, not dashed or solid lines. Use the existing `--squiggle` mask, colored `var(--ink)` at ~0.45 opacity, as two `::before`/`::after` pseudo-elements (height 10px, `mask: var(--squiggle) repeat-x`). Padding ~16px top and bottom.
 5. **Question sections.** Each heading is written in **Caveat** (~1.9rem, `--ink`, line-height 1) as a recruiter's question, followed by body paragraphs (Hanken Grotesk 17px, max 60ch):
    - **Internship (5a):** What problem did it solve? → What did I build? → How does it work? → What was hard? → What would I do differently?
-   - **RecipeFlow (5b):** What problem does it solve? → What did I build? → How does it work? → What was hard? → What's next?
+   - **Skim (5b):** What problem does it solve? → What did I build? → How does it work? → What was hard? → What's next?
    - **"What did I build?"**
      - Internship: one row per feature (grid `110–200px` + `1fr`, gap 14px). Left: a small paper-framed sketch with a caption. Right: the feature name in bold, then a paragraph. Features come from the existing `index.html` lists (Dependency graph, Document sync, AI document parsing).
-     - RecipeFlow: a paragraph, then a centered row of 3 phone screenshots in peach paper frames, each captioned (Recipe import, Meal planning, Shopping list).
+     - Skim: a paragraph, then a centered row of 3 phone screenshots in peach paper frames, each captioned (Recipe import, Meal planning, Shopping list).
    - **"How does it work?"**: a paragraph, then an architecture diagram drawn in the same pen style **on graph paper** (`#fbfaf3` with 14px grid lines in `rgba(60,110,140,.14)`), and that graph-paper sheet sits **inside the project's paper frame** with a caption.
      - Tracker: React → FastAPI → MySQL, with the Teamcenter sync pipeline and the LangChain parser
-     - RecipeFlow: link → FastAPI + AI parser → MySQL library → meal plan → shopping list
-6. **Next project note**: bottom right, a taped sticky note in the next project's paper color (the `.note` style from `notes.css`, ~220px, rotated ±2deg): small line "next project →" plus the project title. Order: Tracker → Reprogramming Tool → RecipeFlow → Tracker.
+     - Skim: link → FastAPI + AI parser → MySQL library → meal plan → shopping list
+6. **Next project note**: bottom right, a taped sticky note in the next project's paper color (the `.note` style from `notes.css`, ~220px, rotated ±2deg): small line "next project →" plus the project title. Order: Tracker → Reprogramming Tool → Skim → Tracker.
 
 **Internship pages use no screenshots.** The real apps are internal. Every image is a drawing.
 
@@ -81,7 +81,7 @@ Top to bottom:
 `sketches-for-svgs.js.txt` contains ready-to-paste replacements for the `"sketch-cert"` and `"sketch-flash"` entries in `svgs.js`. They use the existing `#rough` filter and the `.sketch svg` styles.
 - **sketch-cert** (option 5b): a hand-drawn browser window with a search box ("ASM-1042") and a **DAG with no arrows**: three "program" nodes on the left, "software" in the middle (slightly heavier stroke), three "document" nodes on the right, joined by plain curved lines. **No red ink.**
 - **sketch-flash** (option 5d): a hand-drawn desktop window titled "reprogramming tool" with a module list (module A/B/C, with B selected in red), a "new firmware" field showing "update.hex", a progress bar at 60% (red fill) and a "flash" button. Module names and the file name are placeholders.
-- `sketch-recipe` stays as it is, for the RecipeFlow detail page hero.
+- `sketch-recipe` stays as it is, for the Skim detail page hero.
 
 ## Interactions & behavior
 - Sticky notes in the hero and "read more" links → detail pages
@@ -98,13 +98,13 @@ Top to bottom:
 
 ## Assets
 - `me.jpg`: already in the repo, used only in the home hero
-- RecipeFlow screenshots: 3 needed for the home page and 3 for the detail page (import, meal plan, shopping list). Export at 2x, 9:19. Put them in a new `images/` folder.
+- Skim screenshots: 3 needed for the home page and 3 for the detail page (import, meal plan, shopping list). Export at 2x, 9:19. Put them in a new `images/` folder.
 - Feature sketches and architecture diagrams for the detail pages still need to be drawn, in the same SVG style as `svgs.js`.
 
 ## Files in this folder
 - `README.md`: this file
 - `Home Page.dc.html`: home page reference (use 4a, 3a, 5b, 5d)
-- `Project Detail Pages.dc.html`: detail page reference (5a internship, 5b RecipeFlow)
+- `Project Detail Pages.dc.html`: detail page reference (5a internship, 5b Skim)
 - `sketches-for-svgs.js.txt`: new SVG sketches to paste into `svgs.js`
 
 ## Suggested prompt for Claude Code

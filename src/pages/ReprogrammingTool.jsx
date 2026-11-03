@@ -16,8 +16,8 @@ export default function ReprogrammingTool() {
       subtitle="Collins Aerospace - Software Engineering Intern - Summer 2025"
       description="A Windows desktop application that reprograms embedded modules."
       next={{
-        to: "/projects/recipeflow",
-        title: "RecipeFlow",
+        to: "/projects/skim",
+        title: "Skim",
         paper: "peach",
         rotate: -2,
       }}

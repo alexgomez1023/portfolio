@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Skim Hero Concepts</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Hanken+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f4f1e6; --ink: #1f1d18; --muted: #625d50;
+    --paper-peach: #e3c2a4; --pen-red: #8a2f00; --accent: #a2440a;
+  }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Hanken Grotesk", sans-serif; }
+  main { max-width: 1080px; margin: 0 auto; padding: 32px 16px 80px; }
+  h1 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: 44px; margin: 0 0 4px; }
+  h2 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: 30px; margin: 48px 0 4px; }
+  .lede { color: var(--muted); margin: 0 0 8px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 40px 32px; margin-top: 24px; }
+  .label { font-weight: 700; margin: 14px 0 2px; }
+  .why { color: var(--muted); margin: 0; font-size: 15px; line-height: 1.5; }
+
+  /* same look as .sketch in styles.css */
+  .sketch { position: relative; margin: 0; padding: 22px 18px 12px; background: var(--paper-peach);
+    color: var(--ink); transform: rotate(var(--r, 0)); box-shadow: 0 8px 15px rgba(0,0,0,.15); font-family: "Caveat", cursive; }
+  .sketch::before { content: ""; position: absolute; top: -12px; left: 50%; width: 90px; height: 24px;
+    transform: translateX(-50%) rotate(3deg); background: rgba(255,255,255,.45); }
+  .sketch svg { display: block; width: 100%; height: auto; fill: none; stroke: currentColor;
+    stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .sketch text { fill: currentColor; stroke: none; font-size: 19px; }
+  .sketch .dot { fill: currentColor; }
+  .sketch .dashed { stroke-dasharray: 6 7; }
+  .sketch .mark { stroke: var(--pen-red); }
+  .sketch text.mark { fill: var(--pen-red); }
+  .sketch .hl { stroke: var(--pen-red); stroke-width: 10; opacity: .28; }
+
+  /* non-hand-drawn cards */
+  .card { border-radius: 14px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,.12); aspect-ratio: 3 / 2; position: relative; }
+
+  /* E: flat vector */
+  .flat { background: #e3c2a4; }
+  .flat svg { width: 100%; height: 100%; display: block; }
+
+  /* F: typographic */
+  .type { background: #1f1d18; color: #efeadb; display: flex; flex-direction: column; justify-content: center; padding: 0 8%; }
+  .type .big { font-family: "Instrument Serif", serif; font-size: clamp(34px, 6.4vw, 60px); line-height: 1.02; }
+  .type .big em { color: #e08a4f; }
+  .type .small { margin-top: 14px; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; opacity: .6; }
+
+  /* G: animated skim */
+  .anim { background: #f9f3ea; padding: 6% 7%; font-family: "Instrument Serif", serif; font-size: clamp(14px, 2.2vw, 19px); line-height: 1.55; color: #1f1d18; }
+  .anim .fluff { transition: opacity .6s, filter .6s; }
+  .anim.skimmed .fluff { opacity: .12; filter: blur(1.5px); }
+  .anim .keep { transition: background .6s, color .6s; border-radius: 3px; padding: 0 2px; }
+  .anim.skimmed .keep { background: #e3c2a4; color: #8a2f00; }
+  .anim .tag { position: absolute; right: 16px; bottom: 12px; font-family: "Hanken Grotesk", sans-serif; font-size: 12px;
+    letter-spacing: .08em; text-transform: uppercase; color: #8a2f00; }
+
+  /* H: screenshot fan */
+  .fan { background: linear-gradient(160deg, #e3c2a4, #c99a73); display: flex; align-items: center; justify-content: center; }
+  .fan .ph { width: 24%; aspect-ratio: 9 / 19; background: #1f1d18; border-radius: 18px; padding: 5px; position: absolute;
+    box-shadow: 0 10px 24px rgba(0,0,0,.25); }
+  .fan .ph div { width: 100%; height: 100%; border-radius: 14px; background: #f9f3ea; display: flex; align-items: center;
+    justify-content: center; font-size: 11px; color: #625d50; text-align: center; }
+  .fan .a { transform: translateX(-70%) rotate(-9deg); }
+  .fan .b { transform: translateY(-4%); z-index: 2; }
+  .fan .c { transform: translateX(70%) rotate(9deg); }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="4" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </marker>
+  </defs>
+</svg>
+
+<main>
+  <h1>Skim hero concepts</h1>
+  <p class="lede">Ideas to replace the flowchart at the top of the Skim page. A–D keep the hand-drawn style from the rest of the site. E–H don't.</p>
+
+  <h2>Hand-drawn</h2>
+  <div class="grid">
+    <!-- A: skim the page -->
+    <div>
+      <figure class="sketch" style="--r:1deg">
+        <svg viewBox="0 0 420 280">
+          <g filter="url(#rough)">
+            <rect x="20" y="14" width="170" height="252" rx="6" />
+            <path d="M20 34 H190" />
+            <circle cx="32" cy="24" r="3" /><circle cx="42" cy="24" r="3" /><circle cx="52" cy="24" r="3" />
+            <path d="M34 50 H150" stroke-width="3" />
+            <rect x="34" y="60" width="142" height="56" rx="3" />
+            <path d="M40 110 L74 78 L96 98 L112 86 L170 110" />
+            <circle cx="150" cy="74" r="6" />
+            <path d="M34 130 H176 M34 140 H168 M34 150 H174 M34 160 H140" />
+            <rect class="dashed" x="34" y="170" width="142" height="26" rx="3" />
+            <path class="hl" d="M34 212 H150 M34 224 H130 M34 236 H160" />
+            <path d="M34 212 H150 M34 224 H130 M34 236 H160 M34 254 H120" />
+            <path d="M198 150 C 214 124, 228 122, 244 130" marker-end="url(#arrowhead)" />
+            <rect x="250" y="40" width="152" height="196" rx="6" stroke-width="2.6" />
+            <path d="M268 80 H384" />
+            <circle class="dot" cx="270" cy="118" r="2.5" /><path d="M280 118 H360" />
+            <circle class="dot" cx="270" cy="132" r="2.5" /><path d="M280 132 H340" />
+            <circle class="dot" cx="270" cy="146" r="2.5" /><path d="M280 146 H370" />
+            <path d="M284 192 H380 M284 210 H360" />
+          </g>
+          <text x="105" y="188" text-anchor="middle">ad</text>
+          <text class="mark" x="222" y="112" text-anchor="middle" style="font-size:24px">skim</text>
+          <text x="326" y="72" text-anchor="middle" style="font-size:23px">garlic pasta</text>
+          <text x="266" y="104" style="font-size:17px">ingredients</text>
+          <text x="266" y="174" style="font-size:17px">steps</text>
+          <text x="268" y="197" style="font-size:16px">1</text>
+          <text x="268" y="215" style="font-size:16px">2</text>
+          <text class="mark" x="326" y="262" text-anchor="middle">just the recipe</text>
+        </svg>
+      </figure>
+      <p class="label">A. Skim the page</p>
+      <p class="why">A cluttered recipe blog (photo, filler text, ad) with the useful lines highlighted in red, pulled out onto a clean recipe card. Plays on the name and explains the app in one look.</p>
+    </div>
+
+    <!-- B: everywhere to one place -->
+    <div>
+      <figure class="sketch" style="--r:-1deg">
+        <svg viewBox="0 0 420 280">
+          <g filter="url(#rough)">
+            <rect x="16" y="20" width="104" height="60" rx="6" />
+            <path d="M58 36 L58 64 L82 50 Z" />
+            <rect x="44" y="104" width="54" height="68" rx="7" />
+            <path d="M71 152 C 58 142, 60 128, 71 135 C 82 128, 84 142, 71 152 Z" />
+            <rect x="16" y="196" width="112" height="62" rx="5" />
+            <path d="M16 212 H128 M28 226 H112 M28 238 H100 M28 248 H108" />
+            <path d="M124 48 C 190 48, 230 72, 278 86" marker-end="url(#arrowhead)" />
+            <path d="M102 138 C 170 138, 220 140, 278 140" marker-end="url(#arrowhead)" />
+            <path d="M132 226 C 190 226, 232 204, 278 194" marker-end="url(#arrowhead)" />
+            <rect x="284" y="14" width="116" height="252" rx="16" stroke-width="2.6" />
+            <path d="M326 26 H358 M326 254 H358" />
+            <rect x="296" y="40" width="92" height="40" rx="5" /><rect x="302" y="46" width="28" height="28" rx="3" /><path d="M336 55 H380 M336 67 H366" />
+            <rect x="296" y="88" width="92" height="40" rx="5" /><rect x="302" y="94" width="28" height="28" rx="3" /><path d="M336 103 H380 M336 115 H366" />
+            <rect class="mark" x="296" y="136" width="92" height="40" rx="5" stroke-width="2.6" /><rect x="302" y="142" width="28" height="28" rx="3" /><path d="M336 151 H380 M336 163 H366" />
+            <rect x="296" y="184" width="92" height="40" rx="5" /><rect x="302" y="190" width="28" height="28" rx="3" /><path d="M336 199 H380 M336 211 H366" />
+          </g>
+          <text x="196" y="50" text-anchor="middle">video</text>
+          <text x="186" y="130" text-anchor="middle">reel</text>
+          <text x="200" y="232" text-anchor="middle">website</text>
+          <text class="mark" x="342" y="246" text-anchor="middle" style="font-size:17px">new</text>
+        </svg>
+      </figure>
+      <p class="label">B. From anywhere into one place</p>
+      <p class="why">A video, a reel and a website all flowing into one phone library, with the new recipe circled in red. Tells the "my mom lost recipes everywhere" story.</p>
+    </div>
+
+    <!-- C: phone in the kitchen -->
+    <div>
+      <figure class="sketch" style="--r:0.8deg">
+        <svg viewBox="0 0 420 280">
+          <g filter="url(#rough)">
+            <path d="M8 250 H412" />
+            <path d="M40 180 H160 V236 C160 246 150 250 140 250 H60 C50 250 40 246 40 236 Z" />
+            <path d="M32 180 H168 M40 194 H26 M160 194 H174" />
+            <path d="M74 166 C 64 150, 86 140, 76 120 M100 166 C 90 148, 112 138, 102 112 M126 166 C 116 150, 138 140, 128 122" />
+            <path d="M136 180 L176 104" stroke-width="3" />
+            <ellipse cx="180" cy="96" rx="8" ry="13" transform="rotate(28 180 96)" />
+            <g transform="rotate(-6 305 246)">
+              <rect x="250" y="40" width="110" height="206" rx="14" stroke-width="2.6" />
+              <path d="M290 52 H320" />
+              <circle cx="305" cy="174" r="26" />
+              <path d="M305 174 V156 M305 174 L318 180" />
+              <path class="mark" d="M305 140 A 34 34 0 0 1 339 174" stroke-width="3" />
+              <circle class="dot" cx="281" cy="224" r="3" /><circle class="dot" cx="293" cy="224" r="3" /><circle class="dot" cx="305" cy="224" r="3" />
+              <circle cx="317" cy="224" r="3" /><circle cx="329" cy="224" r="3" />
+            </g>
+            <rect x="380" y="206" width="24" height="44" rx="4" /><rect x="382" y="198" width="20" height="8" rx="2" />
+          </g>
+          <g transform="rotate(-6 305 246)" text-anchor="middle">
+            <text x="305" y="78" style="font-size:16px">step 3 of 5</text>
+            <text x="305" y="106" style="font-size:27px">simmer</text>
+            <text class="mark" x="305" y="130">10 min</text>
+          </g>
+          <text class="mark" x="100" y="274" text-anchor="middle">cook from your phone</text>
+        </svg>
+      </figure>
+      <p class="label">C. In the kitchen</p>
+      <p class="why">A phone propped next to a steaming pot, showing one cooking step and a timer. More illustration than diagram, and backs up "people cook with their phone, not a laptop."</p>
+    </div>
+
+    <!-- D: on the fridge -->
+    <div>
+      <figure class="sketch" style="--r:-0.8deg">
+        <svg viewBox="0 0 420 280">
+          <g filter="url(#rough)">
+            <rect x="70" y="6" width="280" height="256" rx="14" />
+            <path d="M86 50 V120" stroke-width="4" />
+            <g transform="rotate(-2 180 140)">
+              <rect x="104" y="30" width="156" height="216" rx="3" />
+              <path d="M104 96 H260 M104 128 H260 M104 160 H260 M104 192 H260 M104 224 H260" opacity=".35" />
+            </g>
+            <circle class="dot" cx="182" cy="30" r="7" />
+            <g transform="rotate(5 302 196)">
+              <rect x="268" y="148" width="68" height="96" rx="2" />
+              <rect x="276" y="178" width="9" height="9" /><path d="M291 183 H326" />
+              <rect x="276" y="198" width="9" height="9" /><path d="M291 203 H320" />
+              <rect x="276" y="218" width="9" height="9" /><path d="M291 223 H328" />
+              <path class="mark" d="M277 181 L281 186 L288 174 M277 201 L281 206 L288 194" />
+            </g>
+            <circle class="dot" cx="302" cy="148" r="6" />
+          </g>
+          <g transform="rotate(-2 180 140)">
+            <text x="182" y="64" text-anchor="middle" style="font-size:23px">this week</text>
+            <text x="116" y="90">mon</text><text x="166" y="90">tacos</text>
+            <text x="116" y="122">tue</text><text class="mark" x="166" y="122">lemon chicken</text>
+            <text x="116" y="154">wed</text><text x="166" y="154">pasta</text>
+            <text x="116" y="186">thu</text><text class="mark" x="166" y="186">curry</text>
+            <text x="116" y="218">fri</text><text x="166" y="218">pizza night</text>
+          </g>
+          <text x="302" y="172" text-anchor="middle" transform="rotate(5 302 196)" style="font-size:17px">shopping</text>
+          <text class="mark" x="210" y="278" text-anchor="middle" style="font-size:17px">red = Skim filled it in</text>
+        </svg>
+      </figure>
+      <p class="label">D. On the fridge</p>
+      <p class="why">A week's meal plan and shopping list held on a fridge with magnets. Your picks in pencil, the generator's picks in red pen. Focuses on the planning side instead of the import.</p>
+    </div>
+  </div>
+
+  <h2>Not hand-drawn</h2>
+  <div class="grid">
+    <!-- E: flat vector -->
+    <div>
+      <div class="card flat">
+        <svg viewBox="0 0 420 280" font-family="Hanken Grotesk, sans-serif">
+          <circle cx="330" cy="60" r="120" fill="#d8ad87" />
+          <circle cx="70" cy="250" r="90" fill="#eccfb5" />
+          <g transform="rotate(-6 210 150)">
+            <rect x="150" y="22" width="132" height="264" rx="22" fill="#1f1d18" />
+            <rect x="157" y="29" width="118" height="250" rx="17" fill="#f9f3ea" />
+            <rect x="167" y="44" width="98" height="70" rx="10" fill="#e08a4f" />
+            <circle cx="216" cy="84" r="22" fill="#f9f3ea" opacity=".9" />
+            <circle cx="210" cy="80" r="6" fill="#a2440a" /><circle cx="224" cy="88" r="5" fill="#6f8f5a" /><circle cx="214" cy="94" r="4" fill="#a2440a" />
+            <rect x="167" y="124" width="72" height="9" rx="4.5" fill="#1f1d18" />
+            <rect x="167" y="140" width="48" height="7" rx="3.5" fill="#aaa392" />
+            <g fill="#625d50">
+              <circle cx="172" cy="164" r="3" /><rect x="181" y="161" width="70" height="6" rx="3" fill="#cfc6b4" />
+              <circle cx="172" cy="178" r="3" /><rect x="181" y="175" width="56" height="6" rx="3" fill="#cfc6b4" />
+              <circle cx="172" cy="192" r="3" /><rect x="181" y="189" width="64" height="6" rx="3" fill="#cfc6b4" />
+            </g>
+            <rect x="167" y="234" width="98" height="28" rx="14" fill="#a2440a" />
+            <text x="216" y="252" text-anchor="middle" font-size="11" font-weight="700" fill="#f9f3ea">Add to week</text>
+          </g>
+          <g transform="rotate(4 92 96)">
+            <rect x="30" y="66" width="124" height="60" rx="10" fill="#f9f3ea" />
+            <rect x="40" y="76" width="40" height="40" rx="6" fill="#1f1d18" />
+            <path d="M54 86 L54 106 L70 96 Z" fill="#f9f3ea" />
+            <rect x="88" y="84" width="54" height="7" rx="3.5" fill="#1f1d18" />
+            <rect x="88" y="98" width="38" height="6" rx="3" fill="#aaa392" />
+          </g>
+          <path d="M150 112 C 170 120, 170 140, 158 150" stroke="#1f1d18" stroke-width="2" fill="none" stroke-dasharray="3 5" stroke-linecap="round" />
+          <g transform="rotate(-3 340 210)">
+            <rect x="292" y="170" width="104" height="84" rx="10" fill="#f9f3ea" />
+            <text x="304" y="190" font-size="10" font-weight="700" fill="#1f1d18" letter-spacing="1">THIS WEEK</text>
+            <g>
+              <rect x="304" y="200" width="14" height="14" rx="3" fill="#a2440a" />
+              <rect x="322" y="200" width="14" height="14" rx="3" fill="#a2440a" />
+              <rect x="340" y="200" width="14" height="14" rx="3" fill="#e08a4f" />
+              <rect x="358" y="200" width="14" height="14" rx="3" fill="#cfc6b4" />
+              <rect x="376" y="200" width="14" height="14" rx="3" fill="#cfc6b4" />
+              <rect x="304" y="220" width="14" height="14" rx="3" fill="#e08a4f" />
+              <rect x="322" y="220" width="14" height="14" rx="3" fill="#cfc6b4" />
+              <rect x="340" y="220" width="14" height="14" rx="3" fill="#a2440a" />
+              <rect x="358" y="220" width="14" height="14" rx="3" fill="#e08a4f" />
+              <rect x="376" y="220" width="14" height="14" rx="3" fill="#cfc6b4" />
+            </g>
+          </g>
+        </svg>
+      </div>
+      <p class="label">E. Flat product illustration</p>
+      <p class="why">A clean vector phone showing a recipe card, with a video card flying in and a week-grid card on the side. Looks like an app landing page. Stands out from the sketches on purpose, which could feel off-brand on this site.</p>
+    </div>
+
+    <!-- F: typographic -->
+    <div>
+      <div class="card type">
+        <div class="big">2,400 words of<br />life story.<br /><em>Six ingredients.</em></div>
+        <div class="small">Skim keeps the recipe, drops the rest</div>
+      </div>
+      <p class="label">F. Just type</p>
+      <p class="why">No picture at all: a big serif line in the site's heading font. Cheap to make, very confident, and works in dark mode for free. The copy carries all the weight.</p>
+    </div>
+
+    <!-- G: animated -->
+    <div>
+      <div class="card anim" id="anim">
+        <span class="fluff">I first made this on a rainy Tuesday after a long week, and honestly my whole family has been obsessed ever since. Before we get to it, a quick word about my trip to Tuscany… </span>
+        <span class="keep">8 oz spaghetti</span><span class="fluff">, which I like to buy from the little shop down the street, </span>
+        <span class="keep">4 cloves garlic</span><span class="fluff"> (or more, if you're like me!), </span>
+        <span class="keep">⅓ cup olive oil</span><span class="fluff">, and a pinch of love. Don't forget </span>
+        <span class="keep">chili flakes</span><span class="fluff"> and </span><span class="keep">parsley</span><span class="fluff">. Now, back to that trip…</span>
+        <span class="tag">skimming…</span>
+      </div>
+      <p class="label">G. Animated skim</p>
+      <p class="why">Real-looking blog text where the filler fades and blurs out on a loop, leaving the ingredients highlighted. Same idea as A, but it moves, so it shows the app working instead of describing it.</p>
+    </div>
+
+    <!-- H: screenshot fan -->
+    <div>
+      <div class="card fan">
+        <div class="ph a"><div>recipe import<br />screenshot</div></div>
+        <div class="ph b"><div>home screen<br />screenshot</div></div>
+        <div class="ph c"><div>meal plan<br />screenshot</div></div>
+      </div>
+      <p class="label">H. Real screenshots, fanned</p>
+      <p class="why">Your three app screenshots in phone frames, fanned out on a warm gradient. The most honest option once the screenshots are ready, but it repeats the phone row that's already further down the page.</p>
+    </div>
+  </div>
+</main>
+<script>
+  const el = document.getElementById("anim");
+  const tag = el.querySelector(".tag");
+  let on = false;
+  setInterval(() => {
+    on = !on;
+    el.classList.toggle("skimmed", on);
+    tag.textContent = on ? "just the recipe" : "skimming…";
+  }, 2600);
+</script>
+</body>
+</html>

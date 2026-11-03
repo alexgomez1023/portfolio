@@ -13,10 +13,10 @@ import { RecipeDiagram } from "../components/sketches/Diagrams.jsx";
 import { links } from "../data/links.js";
 import { screenshots } from "../data/screenshots.js";
 
-export default function RecipeFlow() {
+export default function Skim() {
   return (
     <ProjectPage
-      title="RecipeFlow"
+      title="Skim"
       subtitle="Personal project"
       description="A recipe and meal planning app I'm building for iOS and Android."
       next={{
@@ -35,7 +35,7 @@ export default function RecipeFlow() {
         <Fact label="platforms">iOS + Android</Fact>
         <Fact label="stack">React Native, FastAPI, MySQL</Fact>
         <Fact label="links">
-          {/* TODO: swap for the RecipeFlow repo link */}
+          {/* TODO: swap for the Skim repo link */}
           <ScribLink href={links.github}>
             GitHub <Arrow />
           </ScribLink>
@@ -47,7 +47,7 @@ export default function RecipeFlow() {
           My mom cooks a lot and kept losing track of recipes saved across
           Instagram, YouTube, and recipe websites. Apps that solve this already
           exist, but most cost money, are slow to import recipes, and feel
-          clunky to use. RecipeFlow saves recipes from anywhere in one place and
+          clunky to use. Skim saves recipes from anywhere in one place and
           turns them into a plan for the week.
         </p>
       </Question>

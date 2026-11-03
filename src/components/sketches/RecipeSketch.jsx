@@ -3,42 +3,46 @@ export default function RecipeSketch() {
     <svg
       viewBox="0 0 420 280"
       role="img"
-      aria-label="Sketch of how RecipeFlow works. A pasted link goes to the backend and AI parser, which produces a recipe card that is saved to the library. Below, a five-day meal plan grid has some meals picked by hand and the remaining slots filled in red by the generator."
+      aria-label="Sketch of how Skim works. A video, a reel and a website each have an arrow pointing into one phone that holds a library of saved recipes, with the newest one circled in red."
     >
       <g filter="url(#rough)">
-        {/* link -> backend -> recipe */}
-        <rect x="12" y="36" width="104" height="44" rx="6" />
-        <path d="M118 58 L150 58" markerEnd="url(#arrowhead)" />
-        <rect x="154" y="30" width="112" height="56" rx="6" />
-        <path d="M268 58 L300 58" markerEnd="url(#arrowhead)" />
-        <rect x="304" y="22" width="104" height="74" rx="8" />
-        <path d="M316 58 H396 M316 70 H384 M316 82 H392" />
-        <path d="M356 98 C 356 118, 334 120, 322 136" markerEnd="url(#arrowhead)" />
-        {/* week plan */}
-        <rect x="30" y="164" width="360" height="92" rx="4" />
-        <path d="M102 164 V256 M174 164 V256 M246 164 V256 M318 164 V256" />
-        <path d="M30 210 H390" />
-        {/* meals I picked */}
-        <rect x="39" y="172" width="54" height="30" rx="4" />
-        <rect x="111" y="218" width="54" height="30" rx="4" />
-        <rect x="255" y="172" width="54" height="30" rx="4" />
-        {/* meals the app filled in */}
-        <rect className="mark" x="39" y="218" width="54" height="30" rx="4" />
-        <rect className="mark" x="183" y="172" width="54" height="30" rx="4" />
-        <rect className="mark" x="327" y="218" width="54" height="30" rx="4" />
+        {/* video */}
+        <rect x="16" y="20" width="104" height="60" rx="6" />
+        <path d="M58 36 L58 64 L82 50 Z" />
+        {/* reel */}
+        <rect x="44" y="104" width="54" height="68" rx="7" />
+        <path d="M71 152 C 58 142, 60 128, 71 135 C 82 128, 84 142, 71 152 Z" />
+        {/* website */}
+        <rect x="16" y="196" width="112" height="62" rx="5" />
+        <path d="M16 212 H128 M28 226 H112 M28 238 H100 M28 248 H108" />
+        {/* everything goes into the phone */}
+        <path d="M124 48 C 190 48, 230 72, 278 86" markerEnd="url(#arrowhead)" />
+        <path d="M102 138 C 170 138, 220 140, 278 140" markerEnd="url(#arrowhead)" />
+        <path d="M132 226 C 190 226, 232 204, 278 194" markerEnd="url(#arrowhead)" />
+        {/* phone with the recipe library */}
+        <rect x="284" y="14" width="116" height="252" rx="16" strokeWidth="2.6" />
+        <path d="M326 26 H358 M326 254 H358" />
+        <rect x="296" y="40" width="92" height="40" rx="5" />
+        <rect x="302" y="46" width="28" height="28" rx="3" />
+        <path d="M336 55 H380 M336 67 H366" />
+        <rect x="296" y="88" width="92" height="40" rx="5" />
+        <rect x="302" y="94" width="28" height="28" rx="3" />
+        <path d="M336 103 H380 M336 115 H366" />
+        {/* the one just saved */}
+        <rect className="mark" x="296" y="136" width="92" height="40" rx="5" strokeWidth="2.6" />
+        <rect x="302" y="142" width="28" height="28" rx="3" />
+        <path d="M336 151 H380 M336 163 H366" />
+        <rect x="296" y="184" width="92" height="40" rx="5" />
+        <rect x="302" y="190" width="28" height="28" rx="3" />
+        <path d="M336 199 H380 M336 211 H366" />
       </g>
       <g textAnchor="middle">
-        <text x="64" y="64">paste a link</text>
-        <text x="210" y="54">backend +</text>
-        <text x="210" y="74">AI parser</text>
-        <text x="356" y="46">recipe</text>
-        <text x="226" y="124">saved to my library</text>
-        <text x="66" y="158">mon</text>
-        <text x="138" y="158">tue</text>
-        <text x="210" y="158">wed</text>
-        <text x="282" y="158">thu</text>
-        <text x="354" y="158">fri</text>
-        <text className="mark" x="210" y="275">generate fills the gaps</text>
+        <text x="196" y="50">video</text>
+        <text x="186" y="130">reel</text>
+        <text x="200" y="232">website</text>
+        <text className="mark" x="342" y="246" style={{ fontSize: 17 }}>
+          new
+        </text>
       </g>
     </svg>
   );
