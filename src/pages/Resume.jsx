@@ -125,23 +125,24 @@ export default function Resume() {
 
           <div className="entry">
             <div className="entry-head">
-              <h3>Skim: Receip Saver and Meal Planning Mobile App</h3>
+              <h3>Skim: Recipe Saver and Meal Planning Mobile App</h3>
               <p className="entry-date">Aug 2026&ndash;Present</p>
             </div>
             <p className="entry-sub">React Native / FastAPI / SQL</p>
             <ul>
               <li>
-                Developed a recipe saver website to store and retrieve user
-                recipes from over 100 external websites
+                Developing a recipe saver app to store and retrieve user recipes
+                from over recipe websites, youtube, instagram reels, and written
+                recipes
               </li>
               <li>
-                Integrated an AI-powered assistant allowing users to communicate
-                directly to create, modify, and format saved recipes using
-                Gemini's Flash API
+                Integrated an AI - powered meal plan generator that can create
+                meal plans based on your current saved recipes and lifestyle
+                goals
               </li>
               <li>
                 Built a RESTful backend API for authentication, web scraping,
-                and recipe management, integrated with a PostgreSQL database for
+                and recipe management, integrated with a MySQL database for
                 persistent storage
               </li>
             </ul>
@@ -155,10 +156,14 @@ export default function Resume() {
             <p className="entry-sub">Python / Pandas / sklearn</p>
             <ul>
               <li>
-                Led a 5-person team for a semester long project as part of the
-                Data Analytics Club at NC State
+                Led a 5-person team analyzing 3 City of Raleigh open datasets to
+                determine how traffic volume, location, and driver demographics
+                contribute to crash rates
               </li>
-              <li></li>
+              <li>
+                Developed Linear Regression and Random Forest models to predict
+                crash severity and rates.
+              </li>
             </ul>
           </div>
 
