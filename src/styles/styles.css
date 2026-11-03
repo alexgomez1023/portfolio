@@ -1,0 +1,410 @@
+/* colors, theme.js sets data-theme on <html> */
+:root {
+  --bg: #f4f1e6;
+  --ink: #1f1d18;
+  --muted: #625d50;
+  --border: rgba(31, 29, 24, 0.18);
+  --accent: #a2440a;
+  --photo-frame: #ffffff;
+  --note-ink: #1f1d18;
+  /* one paper color per project */
+  --paper-straw: #d9d0a0;
+  --paper-sage: #bccdc8;
+  --paper-peach: #e3c2a4;
+  --pen-red: #8a2f00;
+  --max: 1080px;
+  --gutter: max(24px, calc((100% - var(--max)) / 2));
+  --header-h: 70px;
+  /* I use this as a mask so I can color it with background */
+  --squiggle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='10' viewBox='0 0 300 10'%3E%3Cpath d='M0 5 C 22 2 44 8 72 5 S 122 2.5 150 6 S 204 8 232 4 S 278 8 300 5' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E");
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+:root[data-theme="dark"] {
+  --bg: #1b1915;
+  --ink: #efeadb;
+  --muted: #aaa392;
+  --border: rgba(239, 234, 219, 0.18);
+  --accent: #e08a4f;
+  --photo-frame: #efeadb;
+  color-scheme: dark;
+}
+
+/* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.6;
+}
+/* paper texture from the #paper svg filter. The notes and sketches get their
+   own copy so they don't look see-through */
+body::before,
+.site-header::before,
+.note::after,
+.sketch::after {
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  filter: url(#paper);
+  mix-blend-mode: multiply;
+  opacity: 0.6;
+}
+body::before {
+  position: fixed;
+  z-index: -1;
+}
+.site-header::before {
+  position: absolute;
+  z-index: -1;
+}
+.note::after,
+.sketch::after {
+  position: absolute;
+  opacity: 0.45;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.svg-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  color: var(--note-ink);
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* hidden doesn't work on svgs without this */
+[hidden] {
+  display: none !important;
+}
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Site header */
+.site-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  padding: 14px var(--gutter);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+}
+/* squiggle dividers */
+.site-header::after,
+.hero h1::after,
+.projects > h2::after,
+.project-group + .project-group::before,
+.site-footer::before {
+  content: "";
+  height: 10px;
+  background: var(--ink);
+  -webkit-mask: var(--squiggle) repeat-x left center;
+  mask: var(--squiggle) repeat-x left center;
+}
+.site-header::after {
+  position: absolute;
+  top: calc(100% - 5px);
+  left: 0;
+  right: 0;
+  opacity: 0.6;
+}
+.brand {
+  font-family: "Instrument Serif", serif;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.site-header nav {
+  margin-left: auto;
+}
+.site-header nav ul {
+  display: flex;
+  gap: 24px;
+  font-weight: 500;
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.icon-link {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.icon-link:hover {
+  color: var(--accent);
+}
+.icon-link .scrib {
+  display: none;
+}
+.site-header nav a {
+  color: var(--muted);
+}
+.site-header nav a:hover {
+  color: var(--ink);
+}
+.theme-btn {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  color: var(--ink);
+  cursor: pointer;
+}
+.theme-btn:hover {
+  color: var(--accent);
+}
+
+/* Hero */
+.hero {
+  min-height: calc(100vh - var(--header-h));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: center;
+  padding: 64px var(--gutter);
+}
+.me {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.hero .snapshot {
+  width: 172px;
+}
+.hero h1 {
+  margin: 0;
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 400;
+  line-height: 1;
+}
+.hero h1::after {
+  display: block;
+  width: calc(100% + 16px);
+  margin: 8px 0 0 -8px;
+  background: var(--accent);
+}
+.intro {
+  margin: 0;
+  max-width: 44ch;
+  color: var(--muted);
+}
+
+/* Project board */
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 36px 28px;
+}
+.board .note:nth-of-type(2) {
+  margin-top: 24px;
+}
+
+/* Projects */
+.projects {
+  padding: 72px var(--gutter) 40px;
+  scroll-margin-top: var(--header-h);
+}
+.projects > h2::after {
+  display: block;
+  width: 130px;
+  margin-top: 8px;
+  background: var(--accent);
+}
+.projects > h2 {
+  margin: 0 0 16px;
+  font-size: clamp(2.2rem, 4.5vw, 3rem);
+  font-weight: 400;
+  line-height: 1;
+}
+/* the project groups and detail pages are in project-page.css */
+
+/* Sketches */
+.sketch {
+  position: relative;
+  margin: 0;
+  padding: 22px 18px 12px;
+  background: var(--paper, #b0aa82);
+  color: var(--note-ink);
+  transform: rotate(var(--r, 0));
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  font-family: "Caveat", cursive;
+}
+.sketch svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.sketch text {
+  fill: currentColor;
+  stroke: none;
+  font-size: 19px;
+}
+.sketch .dot {
+  fill: currentColor;
+}
+.sketch .dashed {
+  stroke-dasharray: 6 7;
+}
+.sketch .mark {
+  stroke: var(--pen-red);
+}
+.sketch text.mark {
+  fill: var(--pen-red);
+  stroke: none;
+}
+.sketch figcaption {
+  margin-top: 6px;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  text-align: center;
+  opacity: 0.75;
+}
+
+/* Taped photos and screenshots. Same --r, --tape-x and --tape-r as the notes */
+.snapshot {
+  position: relative;
+  margin: 0;
+  padding: 10px 10px 8px;
+  background: var(--photo-frame);
+  color: var(--note-ink);
+  transform: rotate(var(--r, 0));
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  font-family: "Caveat", cursive;
+}
+.snapshot img {
+  width: 100%;
+  height: auto;
+}
+.snapshot.square img {
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.snapshot figcaption {
+  margin-top: 6px;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  text-align: center;
+  opacity: 0.75;
+}
+
+/* Footer */
+.site-footer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px 48px;
+  margin-top: 32px;
+  padding: 48px var(--gutter) 40px;
+}
+.site-footer::before {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  right: 0;
+  opacity: 0.6;
+}
+.site-footer p {
+  margin: 0;
+}
+.footer-name {
+  font-family: "Instrument Serif", serif;
+  font-size: 1.9rem;
+  line-height: 1.1;
+}
+.footer-note {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 26px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding-block: 40px 56px;
+  }
+  .board .note:nth-of-type(2) {
+    margin-top: 0;
+  }
+  .projects {
+    padding-top: 48px;
+  }
+}
+@media (max-width: 600px) {
+  :root {
+    /* header is two rows on phones */
+    --header-h: 106px;
+  }
+  body {
+    font-size: 16px;
+  }
+  .header-actions {
+    margin-left: auto;
+  }
+  .site-header nav {
+    order: 3;
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+  .hero .snapshot {
+    width: 140px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

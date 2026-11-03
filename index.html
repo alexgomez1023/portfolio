@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Gomez</title>
+    <meta
+      name="description"
+      content="Alex Gomez, computer science senior at NC State. Software engineering intern at Collins Aerospace and builder of RecipeFlow."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Hanken+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <!-- this has to run before React loads so the page doesn't flash the wrong theme -->
+    <script>
+      (() => {
+        let saved = null;
+        try {
+          saved = localStorage.getItem("theme");
+        } catch (e) {}
+        const system = matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+        document.documentElement.dataset.theme = saved || system;
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

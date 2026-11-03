@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&amp;family=Hanken+Grotesk:wght@400;500;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+<style>body{margin:0;background:#e9e5d8;font-family:"Hanken Grotesk",system-ui,sans-serif;color:#1f1d18}a{color:#a2440a;text-decoration:none}a:hover{color:#8a2f00}.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}.dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)}.dv-card{max-width:100%;background:#f4f1e6;border:1px solid rgba(0,0,0,.08);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}.dv-next{margin:22px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}</style>
+</helmet>
+
+<svg style="position:absolute;width:0;height:0" aria-hidden="true"><defs>
+<filter id="rough" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="4" result="noise"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap></filter>
+<marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1 L9 5 L1 9" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"></path></marker>
+<marker id="arrowred" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1 L9 5 L1 9" style="fill:none;stroke:#8a2f00;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"></path></marker>
+</defs></svg>
+
+
+<section class="dv-turn" id="t5">
+  <div class="dv-thd"><a class="dv-tid" href="#t5">5</a><span class="dv-tname">Sketches for the two internships</span></div>
+  <div class="dv-thd" style="margin:-8px 0 14px"><span style="font-family:'Instrument Serif',serif;font-size:22px;color:#1f1d18">Software Certification Tracker</span></div>
+  <div class="dv-opts">
+    
+    <div class="dv-opt" id="5b">
+      <div class="dv-olabel"><a class="dv-oid" href="#5b">5b</a>Sketch of the app itself</div>
+      <div class="dv-card" style="width:380px;padding:34px 28px 26px;display:flex;flex-direction:column;gap:18px"><figure style="position:relative;margin:0;padding:20px 16px 10px;background:#d9d0a0;transform:rotate(-1deg);box-shadow:0 8px 15px rgba(0,0,0,.15);font-family:Caveat,cursive;display:flex;flex-direction:column;gap:6px"><div style="position:absolute;top:-12px;left:40%;width:80px;height:24px;background:rgba(255,255,255,.6);transform:translateX(-50%) rotate(3deg)"></div><svg viewBox="0 0 420 280" style="display:block;width:100%;height:auto;fill:none;stroke:#1f1d18;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;color:#1f1d18"><g style="filter:url(#rough)"><rect x="20" y="20" width="380" height="240" rx="8"></rect><path d="M20 50 H400"></path><circle cx="38" cy="35" r="4"></circle><circle cx="52" cy="35" r="4"></circle><circle cx="66" cy="35" r="4"></circle><rect x="40" y="66" width="200" height="30" rx="5"></rect><circle cx="224" cy="80" r="7"></circle><path d="M229 85 L235 91"></path>
+<rect x="40" y="116" width="88" height="28" rx="5"></rect><rect x="40" y="162" width="88" height="28" rx="5"></rect><rect x="40" y="208" width="88" height="28" rx="5"></rect>
+<rect x="166" y="158" width="88" height="36" rx="6" style="stroke-width:2.8"></rect>
+<rect x="292" y="116" width="92" height="28" rx="5"></rect><rect x="292" y="162" width="92" height="28" rx="5"></rect><rect x="292" y="208" width="92" height="28" rx="5"></rect>
+<path d="M166 170 C 150 162, 146 132, 128 130"></path><path d="M166 176 L128 176"></path><path d="M166 182 C 150 190, 146 220, 128 222"></path>
+<path d="M254 170 C 270 162, 274 132, 292 130"></path><path d="M254 176 L292 176"></path><path d="M254 182 C 270 190, 274 220, 292 222"></path></g><g style="fill:#1f1d18;stroke:none;font-family:Caveat,cursive;font-size:18px;text-anchor:middle"><text x="54" y="88" style="text-anchor:start;font-size:22px">ASM-1042</text><text x="84" y="136">program</text><text x="84" y="182">program</text><text x="84" y="228">program</text><text x="210" y="183" style="font-size:21px">software</text><text x="338" y="136">document</text><text x="338" y="182">document</text><text x="338" y="228">document</text></g></svg><figcaption style="font-size:17px;line-height:1.2;text-align:center;opacity:.6">caption</figcaption></figure><span style="font-size:13.5px;line-height:1.5;color:#625d50">Since you can't show a screenshot, draw the screen: search an assembly number, see the dependency graph: programs on the left, the software in the middle, its documents on the right.</span></div>
+    </div>
+    
+  </div>
+  <div class="dv-thd" style="margin:32px 0 14px"><span style="font-family:'Instrument Serif',serif;font-size:22px;color:#1f1d18">Embedded Reprogramming Tool</span></div>
+  <div class="dv-opts">
+    <div class="dv-opt" id="5d">
+      <div class="dv-olabel"><a class="dv-oid" href="#5d">5d</a>Sketch of the app itself</div>
+      <div class="dv-card" style="width:380px;padding:34px 28px 26px;display:flex;flex-direction:column;gap:18px"><figure style="position:relative;margin:0;padding:20px 16px 10px;background:#bccdc8;transform:rotate(-1.2deg);box-shadow:0 8px 15px rgba(0,0,0,.15);font-family:Caveat,cursive;display:flex;flex-direction:column;gap:6px"><div style="position:absolute;top:-12px;left:30%;width:80px;height:24px;background:rgba(255,255,255,.6);transform:translateX(-50%) rotate(4deg)"></div><svg viewBox="0 0 420 280" style="display:block;width:100%;height:auto;fill:none;stroke:#1f1d18;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;color:#1f1d18"><g style="filter:url(#rough)"><rect x="20" y="20" width="380" height="240" rx="6"></rect><path d="M20 48 H400"></path><rect x="36" y="64" width="130" height="180"></rect><path d="M36 96 H166 M36 128 H166 M36 160 H166"></path><rect x="40" y="100" width="122" height="24" rx="3" style="stroke:#8a2f00"></rect><rect x="190" y="98" width="192" height="28" rx="4"></rect><rect x="190" y="160" width="192" height="20" rx="5"></rect><path d="M198 170 H306" style="stroke:#8a2f00;stroke-width:10"></path><rect x="300" y="212" width="82" height="30" rx="6"></rect></g><g style="fill:#1f1d18;stroke:none;font-family:Caveat,cursive;font-size:22px;text-anchor:middle"><text x="34" y="41" style="text-anchor:start;font-size:19px">reprogramming tool</text><text x="50" y="87" style="text-anchor:start">module A</text><text x="50" y="119" style="text-anchor:start;fill:#8a2f00">module B</text><text x="50" y="151" style="text-anchor:start">module C</text><text x="190" y="90" style="text-anchor:start;font-size:19px">new firmware</text><text x="200" y="119" style="text-anchor:start">update.hex</text><text x="286" y="204">60%</text><text x="341" y="233">flash</text></g></svg><figcaption style="font-size:17px;line-height:1.2;text-align:center;opacity:.6">caption</figcaption></figure><span style="font-size:13.5px;line-height:1.5;color:#625d50">A hand-drawn version of the desktop tool: pick a module, load the firmware, flash. Module names and file name are made up.</span></div>
+    </div>
+    
+    
+  </div>
+  <p class="dv-next">Both are used in <a class="dv-oid" href="#4a">4a</a>.</p>
+</section>
+
+<section class="dv-turn" id="t4">
+  <div class="dv-thd"><a class="dv-tid" href="#t4">4</a><span class="dv-tname"><a class="dv-oid" href="#2a">2a</a> refined: hero with sticky notes unchanged, every image on paper with a caption</span></div>
+  <div class="dv-opts">
+    <div class="dv-opt" id="4a">
+      <div class="dv-olabel"><a class="dv-oid" href="#4a">4a</a>Home page</div>
+      <div class="dv-card" style="width:500px;padding:0 0 22px">
+        <div style="display:flex;align-items:center;gap:14px;padding:12px 22px;border-bottom:1.5px solid rgba(31,29,24,.35)">
+          <span style="font-family:'Instrument Serif',serif;font-size:17px">Alex Gomez</span>
+          <span style="margin-left:auto;display:flex;gap:12px;font-size:11px;font-weight:500;color:#625d50"><span>Projects</span><span>Résumé</span></span>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center;padding:26px 26px 30px">
+          <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+            <div style="width:54px;height:54px;padding:4px;background:#fff;transform:rotate(-4deg);box-shadow:0 4px 8px rgba(0,0,0,.15)"><div style="height:100%;background:repeating-linear-gradient(135deg,#e7e3d6 0 5px,#efece2 5px 10px)"></div></div>
+            <span style="font-family:'Instrument Serif',serif;font-size:30px;line-height:1">Alex Gomez</span>
+            <span style="width:110px;height:3px;border-radius:2px;background:#a2440a"></span>
+            <div style="display:flex;flex-direction:column;gap:5px;width:100%"><span style="height:5px;border-radius:3px;background:rgba(31,29,24,.18)"></span><span style="height:5px;width:80%;border-radius:3px;background:rgba(31,29,24,.18)"></span></div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;font-family:Caveat,cursive">
+            <div style="width:90px;padding:8px;background:#d9d0a0;transform:rotate(-3deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">Software Certification Tracker</div>
+            <div style="width:90px;padding:8px;margin-top:10px;background:#bccdc8;transform:rotate(2deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">Embedded Reprogramming Tool</div>
+            <div style="width:90px;padding:8px;background:#e3c2a4;transform:rotate(-1.5deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">RecipeFlow</div>
+          </div>
+        </div>
+        <div style="padding:0 26px;display:flex;flex-direction:column;gap:6px">
+          <span style="font-family:'Instrument Serif',serif;font-size:24px;line-height:1">Projects</span>
+          <span style="width:70px;height:3px;border-radius:2px;background:#a2440a"></span>
+        </div>
+        <div style="padding:22px 26px 26px;display:flex;flex-direction:column;gap:24px">
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <span style="font-family:Caveat,cursive;font-size:16px;color:#625d50">what I'm building now</span>
+            <div style="display:flex;justify-content:center;gap:16px;padding:6px 0"><div style="position:relative;width:84px;padding:6px 6px 3px;background:#e3c2a4;transform:rotate(-3deg);box-shadow:0 5px 10px rgba(0,0,0,.14);display:flex;flex-direction:column;gap:3px"><div style="position:absolute;top:-8px;left:50%;width:34px;height:11px;background:rgba(255,255,255,.6);transform:translateX(-50%) rotate(3deg)"></div><div style="aspect-ratio:9/19;background:repeating-linear-gradient(135deg,#ece8dc 0 5px,#f6f3ea 5px 10px)"></div><span style="font-family:Caveat,cursive;font-size:12px;line-height:1.2;text-align:center;opacity:.6">caption</span></div><div style="position:relative;width:84px;margin-top:12px;padding:6px 6px 3px;background:#e3c2a4;transform:rotate(1.5deg);box-shadow:0 5px 10px rgba(0,0,0,.14);display:flex;flex-direction:column;gap:3px"><div style="position:absolute;top:-8px;left:50%;width:34px;height:11px;background:rgba(255,255,255,.6);transform:translateX(-50%) rotate(-1.5deg)"></div><div style="aspect-ratio:9/19;background:repeating-linear-gradient(135deg,#ece8dc 0 5px,#f6f3ea 5px 10px)"></div><span style="font-family:Caveat,cursive;font-size:12px;line-height:1.2;text-align:center;opacity:.6">caption</span></div><div style="position:relative;width:84px;padding:6px 6px 3px;background:#e3c2a4;transform:rotate(-1deg);box-shadow:0 5px 10px rgba(0,0,0,.14);display:flex;flex-direction:column;gap:3px"><div style="position:absolute;top:-8px;left:50%;width:34px;height:11px;background:rgba(255,255,255,.6);transform:translateX(-50%) rotate(1deg)"></div><div style="aspect-ratio:9/19;background:repeating-linear-gradient(135deg,#ece8dc 0 5px,#f6f3ea 5px 10px)"></div><span style="font-family:Caveat,cursive;font-size:12px;line-height:1.2;text-align:center;opacity:.6">caption</span></div></div>
+            <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:end">
+              <div style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Instrument Serif',serif;font-size:22px;line-height:1.1">RecipeFlow</span><span style="font-family:Caveat,cursive;font-size:14px;color:#a2440a;line-height:1">My own app</span><span style="height:5px;border-radius:3px;background:rgba(31,29,24,.18)"></span><span style="height:5px;width:70%;border-radius:3px;background:rgba(31,29,24,.18)"></span></div><span style="font-family:Caveat,cursive;font-size:16px;color:#a2440a">read the full story →</span>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px;padding-top:18px;border-top:1.5px dashed rgba(31,29,24,.2)">
+            <span style="font-family:Caveat,cursive;font-size:16px;color:#625d50">before that</span>
+            <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px">
+              <div style="display:flex;flex-direction:column;gap:8px"><div style="position:relative;padding:10px 10px 4px;background:#d9d0a0;transform:rotate(-1.5deg);box-shadow:0 6px 12px rgba(0,0,0,.12);display:flex;flex-direction:column;gap:3px"><div style="position:absolute;top:-8px;left:50%;width:50px;height:15px;background:rgba(255,255,255,.6);transform:translateX(-50%) rotate(3deg)"></div><svg viewBox="0 0 420 280" style="display:block;width:100%;height:auto;fill:none;stroke:#1f1d18;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;color:#1f1d18"><g style="filter:url(#rough)"><rect x="20" y="20" width="380" height="240" rx="8"></rect><path d="M20 50 H400"></path><circle cx="38" cy="35" r="4"></circle><circle cx="52" cy="35" r="4"></circle><circle cx="66" cy="35" r="4"></circle><rect x="40" y="66" width="200" height="30" rx="5"></rect><circle cx="224" cy="80" r="7"></circle><path d="M229 85 L235 91"></path>
+<rect x="40" y="116" width="88" height="28" rx="5"></rect><rect x="40" y="162" width="88" height="28" rx="5"></rect><rect x="40" y="208" width="88" height="28" rx="5"></rect>
+<rect x="166" y="158" width="88" height="36" rx="6" style="stroke-width:2.8"></rect>
+<rect x="292" y="116" width="92" height="28" rx="5"></rect><rect x="292" y="162" width="92" height="28" rx="5"></rect><rect x="292" y="208" width="92" height="28" rx="5"></rect>
+<path d="M166 170 C 150 162, 146 132, 128 130"></path><path d="M166 176 L128 176"></path><path d="M166 182 C 150 190, 146 220, 128 222"></path>
+<path d="M254 170 C 270 162, 274 132, 292 130"></path><path d="M254 176 L292 176"></path><path d="M254 182 C 270 190, 274 220, 292 222"></path></g><g style="fill:#1f1d18;stroke:none;font-family:Caveat,cursive;font-size:18px;text-anchor:middle"><text x="54" y="88" style="text-anchor:start;font-size:22px">ASM-1042</text><text x="84" y="136">program</text><text x="84" y="182">program</text><text x="84" y="228">program</text><text x="210" y="183" style="font-size:21px">software</text><text x="338" y="136">document</text><text x="338" y="182">document</text><text x="338" y="228">document</text></g></svg><span style="font-family:Caveat,cursive;font-size:13px;line-height:1.2;text-align:center;opacity:.6">caption</span></div><span style="font-family:'Instrument Serif',serif;font-size:15px;line-height:1.1">Software Certification Tracker</span><span style="font-family:Caveat,cursive;font-size:13px;color:#a2440a;line-height:1">Collins Aerospace, Summer 2026</span><span style="font-family:Caveat,cursive;font-size:15px;color:#a2440a">read more →</span></div>
+              <div style="display:flex;flex-direction:column;gap:8px"><div style="position:relative;padding:10px 10px 4px;background:#bccdc8;transform:rotate(1deg);box-shadow:0 6px 12px rgba(0,0,0,.12);display:flex;flex-direction:column;gap:3px"><div style="position:absolute;top:-8px;left:40%;width:50px;height:15px;background:rgba(255,255,255,.6);transform:translateX(-50%) rotate(-3deg)"></div><svg viewBox="0 0 420 280" style="display:block;width:100%;height:auto;fill:none;stroke:#1f1d18;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;color:#1f1d18"><g style="filter:url(#rough)"><rect x="20" y="20" width="380" height="240" rx="6"></rect><path d="M20 48 H400"></path><rect x="36" y="64" width="130" height="180"></rect><path d="M36 96 H166 M36 128 H166 M36 160 H166"></path><rect x="40" y="100" width="122" height="24" rx="3" style="stroke:#8a2f00"></rect><rect x="190" y="98" width="192" height="28" rx="4"></rect><rect x="190" y="160" width="192" height="20" rx="5"></rect><path d="M198 170 H306" style="stroke:#8a2f00;stroke-width:10"></path><rect x="300" y="212" width="82" height="30" rx="6"></rect></g><g style="fill:#1f1d18;stroke:none;font-family:Caveat,cursive;font-size:22px;text-anchor:middle"><text x="34" y="41" style="text-anchor:start;font-size:19px">reprogramming tool</text><text x="50" y="87" style="text-anchor:start">module A</text><text x="50" y="119" style="text-anchor:start;fill:#8a2f00">module B</text><text x="50" y="151" style="text-anchor:start">module C</text><text x="190" y="90" style="text-anchor:start;font-size:19px">new firmware</text><text x="200" y="119" style="text-anchor:start">update.hex</text><text x="286" y="204">60%</text><text x="341" y="233">flash</text></g></svg><span style="font-family:Caveat,cursive;font-size:13px;line-height:1.2;text-align:center;opacity:.6">caption</span></div><span style="font-family:'Instrument Serif',serif;font-size:15px;line-height:1.1">Embedded Reprogramming Tool</span><span style="font-family:Caveat,cursive;font-size:13px;color:#a2440a;line-height:1">Collins Aerospace, Summer 2025</span><span style="font-family:Caveat,cursive;font-size:15px;color:#a2440a">read more →</span></div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;padding:16px 26px 0;border-top:1.5px solid rgba(31,29,24,.35);margin:0 0 0">
+          <span style="font-family:'Instrument Serif',serif;font-size:18px">Alex Gomez</span>
+          <span style="display:flex;gap:10px;font-size:10px;font-weight:500"><span>Email</span><span>Résumé</span><span>LinkedIn</span><span>GitHub</span></span>
+        </div>
+      </div>
+      <span style="font-family:Caveat,cursive;font-size:16px;color:#8a2f00;max-width:500px;line-height:1.2">The hero notes still link to each detail page. Below, RecipeFlow leads with its screens, and the internships follow with their sketches. Each paper color matches its note.</span>
+    </div>
+  </div>
+  <p class="dv-next">Sketches: <a class="dv-oid" href="#5b">5b</a> (no red ink) for the cert tracker, <a class="dv-oid" href="#5d">5d</a> for the reprogramming tool. Try next: "build <a class="dv-oid" href="#4a">4a</a> in hi-fi with the real copy" · "show <a class="dv-oid" href="#4a">4a</a> on mobile"</p>
+</section>
+
+<section class="dv-turn" id="t3">
+  <div class="dv-thd"><a class="dv-tid" href="#t3">3</a><span class="dv-tname">Photo frame for the home hero (the only place the photo appears)</span></div>
+  <div class="dv-opts">
+    <div class="dv-opt" id="3a">
+      <div class="dv-olabel"><a class="dv-oid" href="#3a">3a</a>White photo frame, one piece of tape (what you have now)</div>
+      <div class="dv-card" style="width:380px;padding:44px 34px 32px;display:flex;flex-direction:column;align-items:flex-start;gap:20px">
+          <figure style="position:relative;margin:0;width:172px;padding:10px 10px 8px;background:#fff;transform:rotate(-4deg);box-shadow:0 8px 15px rgba(0,0,0,.15)"><div style="position:absolute;top:-12px;left:50%;width:80px;height:24px;background:rgba(255,255,255,0.6);transform:translateX(-50%) rotate(3deg)"></div><img src="me.jpg" alt="Photo of Alex Gomez" style="display:block;width:100%;aspect-ratio:1;object-fit:cover;"></figure>
+          <span style="font-family:'Instrument Serif',serif;font-size:44px;line-height:1">Alex Gomez</span>
+          <span style="width:240px;height:3px;border-radius:2px;background:#a2440a;margin-top:-6px"></span>
+          <span style="font-size:14px;line-height:1.6;color:#625d50;max-width:44ch">I'm a computer science student at NC State, graduating in May 2027.</span>
+      </div>
+      <span style="font-family:Caveat,cursive;font-size:16px;color:#8a2f00;max-width:380px;line-height:1.2">Clean and quiet. The only white frame left on the site if everything else moves to paper.</span>
+    </div>
+    
+  </div>
+  <p class="dv-next">Keeping <a class="dv-oid" href="#3a">3a</a>: the white photo frame you have now.</p>
+</section>
+
+<section class="dv-turn" id="t2">
+  <div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname">More ideas for the Projects section (header, hero and footer unchanged)</span></div>
+  <div class="dv-opts">
+
+    <div class="dv-opt" id="2a">
+      <div class="dv-olabel"><a class="dv-oid" href="#2a">2a</a>Featured: what you're building now, big; internships smaller below</div>
+      <div class="dv-card" style="width:500px;padding:0 0 22px">
+        <div style="display:flex;align-items:center;gap:14px;padding:12px 22px;border-bottom:1.5px solid rgba(31,29,24,.35)">
+          <span style="font-family:'Instrument Serif',serif;font-size:17px">Alex Gomez</span>
+          <span style="margin-left:auto;display:flex;gap:12px;font-size:11px;font-weight:500;color:#625d50"><span>Projects</span><span>Résumé</span></span>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center;padding:26px 26px 30px">
+          <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+            <div style="width:54px;height:54px;padding:4px;background:#fff;transform:rotate(-4deg);box-shadow:0 4px 8px rgba(0,0,0,.15)"><div style="height:100%;background:repeating-linear-gradient(135deg,#e7e3d6 0 5px,#efece2 5px 10px)"></div></div>
+            <span style="font-family:'Instrument Serif',serif;font-size:30px;line-height:1">Alex Gomez</span>
+            <span style="width:110px;height:3px;border-radius:2px;background:#a2440a"></span>
+            <div style="display:flex;flex-direction:column;gap:5px;width:100%"><span style="height:5px;border-radius:3px;background:rgba(31,29,24,.18)"></span><span style="height:5px;width:80%;border-radius:3px;background:rgba(31,29,24,.18)"></span></div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;font-family:Caveat,cursive">
+            <div style="width:90px;padding:8px;background:#d9d0a0;transform:rotate(-3deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">Software Certification Tracker</div>
+            <div style="width:90px;padding:8px;margin-top:10px;background:#bccdc8;transform:rotate(2deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">Embedded Reprogramming Tool</div>
+            <div style="width:90px;padding:8px;background:#e3c2a4;transform:rotate(-1.5deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">RecipeFlow</div>
+          </div>
+        </div>
+        <div style="padding:0 26px;display:flex;flex-direction:column;gap:6px">
+          <span style="font-family:'Instrument Serif',serif;font-size:24px;line-height:1">Projects</span>
+          <span style="width:70px;height:3px;border-radius:2px;background:#a2440a"></span>
+        </div>
+        <div style="padding:22px 26px 26px;display:flex;flex-direction:column;gap:22px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font-family:Caveat,cursive;font-size:15px;color:#625d50">what I'm building now</span>
+            <div style="padding:20px 0 12px;background:#e3c2a4;box-shadow:0 6px 12px rgba(0,0,0,.12);display:flex;justify-content:center;gap:14px"><div style="width:70px;padding:3px 3px 8px;background:#fff;transform:rotate(-3deg);box-shadow:0 4px 8px rgba(0,0,0,.15)"><div style="aspect-ratio:9/19;background:repeating-linear-gradient(135deg,#e7e3d6 0 5px,#efece2 5px 10px)"></div></div><div style="width:70px;margin-top:-6px;padding:3px 3px 8px;background:#fff;transform:rotate(1deg);box-shadow:0 4px 8px rgba(0,0,0,.15)"><div style="aspect-ratio:9/19;background:repeating-linear-gradient(135deg,#e7e3d6 0 5px,#efece2 5px 10px)"></div></div><div style="width:70px;padding:3px 3px 8px;background:#fff;transform:rotate(3deg);box-shadow:0 4px 8px rgba(0,0,0,.15)"><div style="aspect-ratio:9/19;background:repeating-linear-gradient(135deg,#e7e3d6 0 5px,#efece2 5px 10px)"></div></div></div>
+            <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:end">
+              <div style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Instrument Serif',serif;font-size:22px;line-height:1.1">RecipeFlow</span><span style="height:5px;border-radius:3px;background:rgba(31,29,24,.18)"></span><span style="height:5px;width:70%;border-radius:3px;background:rgba(31,29,24,.18)"></span></div><span style="font-family:Caveat,cursive;font-size:16px;color:#a2440a">read the full story →</span>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;padding-top:16px;border-top:1.5px dashed rgba(31,29,24,.2)">
+            <span style="font-family:Caveat,cursive;font-size:15px;color:#625d50">before that</span>
+            <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px">
+              <div style="display:flex;flex-direction:column;gap:6px"><div style="height:70px;background:#d9d0a0;transform:rotate(-1.5deg);box-shadow:0 6px 12px rgba(0,0,0,.12);display:grid;place-items:center;font-family:Caveat,cursive;font-size:15px">hero sketch</div><span style="font-family:'Instrument Serif',serif;font-size:15px;line-height:1.1">Software Certification Tracker</span><span style="font-family:Caveat,cursive;font-size:13px;color:#a2440a;line-height:1">Collins, 2026</span></div>
+              <div style="display:flex;flex-direction:column;gap:6px"><div style="height:70px;background:#bccdc8;transform:rotate(1deg);box-shadow:0 6px 12px rgba(0,0,0,.12);display:grid;place-items:center;font-family:Caveat,cursive;font-size:15px">hero sketch</div><span style="font-family:'Instrument Serif',serif;font-size:15px;line-height:1.1">Embedded Reprogramming Tool</span><span style="font-family:Caveat,cursive;font-size:13px;color:#a2440a;line-height:1">Collins, 2025</span></div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;padding:16px 26px 0;border-top:1.5px solid rgba(31,29,24,.35);margin:0 0 0">
+          <span style="font-family:'Instrument Serif',serif;font-size:18px">Alex Gomez</span>
+          <span style="display:flex;gap:10px;font-size:10px;font-weight:500"><span>Email</span><span>Résumé</span><span>LinkedIn</span><span>GitHub</span></span>
+        </div>
+      </div>
+      <span style="font-family:Caveat,cursive;font-size:16px;color:#8a2f00;max-width:500px;line-height:1.2">Leads with RecipeFlow because it has real screens. The two internships sit under "before that" with their sketches.</span>
+    </div>
+
+
+    <div class="dv-opt" id="2b">
+      <div class="dv-olabel"><a class="dv-oid" href="#2b">2b</a>Quick scan: problem / built / result for each project</div>
+      <div class="dv-card" style="width:500px;padding:0 0 22px">
+        <div style="display:flex;align-items:center;gap:14px;padding:12px 22px;border-bottom:1.5px solid rgba(31,29,24,.35)">
+          <span style="font-family:'Instrument Serif',serif;font-size:17px">Alex Gomez</span>
+          <span style="margin-left:auto;display:flex;gap:12px;font-size:11px;font-weight:500;color:#625d50"><span>Projects</span><span>Résumé</span></span>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center;padding:26px 26px 30px">
+          <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+            <div style="width:54px;height:54px;padding:4px;background:#fff;transform:rotate(-4deg);box-shadow:0 4px 8px rgba(0,0,0,.15)"><div style="height:100%;background:repeating-linear-gradient(135deg,#e7e3d6 0 5px,#efece2 5px 10px)"></div></div>
+            <span style="font-family:'Instrument Serif',serif;font-size:30px;line-height:1">Alex Gomez</span>
+            <span style="width:110px;height:3px;border-radius:2px;background:#a2440a"></span>
+            <div style="display:flex;flex-direction:column;gap:5px;width:100%"><span style="height:5px;border-radius:3px;background:rgba(31,29,24,.18)"></span><span style="height:5px;width:80%;border-radius:3px;background:rgba(31,29,24,.18)"></span></div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;font-family:Caveat,cursive">
+            <div style="width:90px;padding:8px;background:#d9d0a0;transform:rotate(-3deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">Software Certification Tracker</div>
+            <div style="width:90px;padding:8px;margin-top:10px;background:#bccdc8;transform:rotate(2deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">Embedded Reprogramming Tool</div>
+            <div style="width:90px;padding:8px;background:#e3c2a4;transform:rotate(-1.5deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">RecipeFlow</div>
+          </div>
+        </div>
+        <div style="padding:0 26px;display:flex;flex-direction:column;gap:6px">
+          <span style="font-family:'Instrument Serif',serif;font-size:24px;line-height:1">Projects</span>
+          <span style="width:70px;height:3px;border-radius:2px;background:#a2440a"></span>
+        </div>
+        <div style="padding:10px 26px 24px;display:flex;flex-direction:column">
+          <div style="display:flex;flex-direction:column;gap:8px;padding:16px 0;border-bottom:1.5px dashed rgba(31,29,24,.2)">
+            <div style="display:flex;align-items:baseline;gap:10px"><span style="font-family:'Instrument Serif',serif;font-size:18px;line-height:1.1">Software Certification Tracker</span><span style="font-family:Caveat,cursive;font-size:14px;color:#a2440a;line-height:1">2026</span><span style="margin-left:auto;width:12px;height:12px;background:#d9d0a0;transform:rotate(-6deg);box-shadow:0 2px 4px rgba(0,0,0,.15)"></span></div>
+            <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px">
+              <div style="display:flex;flex-direction:column;gap:3px"><span style="font-family:Caveat,cursive;font-size:14px;color:#625d50">problem</span><span style="font-size:10.5px;line-height:1.35">Status spread across spreadsheets</span></div>
+              <div style="display:flex;flex-direction:column;gap:3px"><span style="font-family:Caveat,cursive;font-size:14px;color:#625d50">built</span><span style="font-size:10.5px;line-height:1.35">Full-stack web app with a dependency graph</span></div>
+              <div style="display:flex;flex-direction:column;gap:3px"><span style="font-family:Caveat,cursive;font-size:14px;color:#625d50">result</span><span style="font-size:10.5px;line-height:1.35">Lookups 20 min → 2</span></div>
+            </div>
+            <span style="font-family:Caveat,cursive;font-size:16px;color:#a2440a">read the full story →</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;padding:16px 0;border-bottom:1.5px dashed rgba(31,29,24,.2)">
+            <div style="display:flex;align-items:baseline;gap:10px"><span style="font-family:'Instrument Serif',serif;font-size:18px;line-height:1.1">Embedded Reprogramming Tool</span><span style="font-family:Caveat,cursive;font-size:14px;color:#a2440a;line-height:1">2025</span><span style="margin-left:auto;width:12px;height:12px;background:#bccdc8;transform:rotate(-6deg);box-shadow:0 2px 4px rgba(0,0,0,.15)"></span></div>
+            <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px">
+              <div style="display:flex;flex-direction:column;gap:3px"><span style="font-family:Caveat,cursive;font-size:14px;color:#625d50">problem</span><span style="font-size:10.5px;line-height:1.35">Modules needed a reprogramming tool</span></div>
+              <div style="display:flex;flex-direction:column;gap:3px"><span style="font-family:Caveat,cursive;font-size:14px;color:#625d50">built</span><span style="font-size:10.5px;line-height:1.35">Windows desktop app in C#</span></div>
+              <div style="display:flex;flex-direction:column;gap:3px"><span style="font-family:Caveat,cursive;font-size:14px;color:#625d50">result</span><span style="font-size:10.5px;line-height:1.35">Owned it, prototype to deployment</span></div>
+            </div>
+            <span style="font-family:Caveat,cursive;font-size:16px;color:#a2440a">read the full story →</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;padding:16px 0;">
+            <div style="display:flex;align-items:baseline;gap:10px"><span style="font-family:'Instrument Serif',serif;font-size:18px;line-height:1.1">RecipeFlow</span><span style="font-family:Caveat,cursive;font-size:14px;color:#a2440a;line-height:1">now</span><span style="margin-left:auto;width:12px;height:12px;background:#e3c2a4;transform:rotate(-6deg);box-shadow:0 2px 4px rgba(0,0,0,.15)"></span></div>
+            <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px">
+              <div style="display:flex;flex-direction:column;gap:3px"><span style="font-family:Caveat,cursive;font-size:14px;color:#625d50">problem</span><span style="font-size:10.5px;line-height:1.35">Recipes saved in too many places</span></div>
+              <div style="display:flex;flex-direction:column;gap:3px"><span style="font-family:Caveat,cursive;font-size:14px;color:#625d50">built</span><span style="font-size:10.5px;line-height:1.35">iOS + Android app with AI import</span></div>
+              <div style="display:flex;flex-direction:column;gap:3px"><span style="font-family:Caveat,cursive;font-size:14px;color:#625d50">result</span><span style="font-size:10.5px;line-height:1.35">In progress</span></div>
+            </div>
+            <span style="font-family:Caveat,cursive;font-size:16px;color:#a2440a">read the full story →</span>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;padding:16px 26px 0;border-top:1.5px solid rgba(31,29,24,.35);margin:0 0 0">
+          <span style="font-family:'Instrument Serif',serif;font-size:18px">Alex Gomez</span>
+          <span style="display:flex;gap:10px;font-size:10px;font-weight:500"><span>Email</span><span>Résumé</span><span>LinkedIn</span><span>GitHub</span></span>
+        </div>
+      </div>
+      <span style="font-family:Caveat,cursive;font-size:16px;color:#8a2f00;max-width:500px;line-height:1.2">Answers a recruiter's first three questions without a click. Same questions as the detail pages, so the two feel connected.</span>
+    </div>
+
+
+    <div class="dv-opt" id="2c">
+      <div class="dv-olabel"><a class="dv-oid" href="#2c">2c</a>Grouped: "at Collins Aerospace" timeline + "on my own"</div>
+      <div class="dv-card" style="width:500px;padding:0 0 22px">
+        <div style="display:flex;align-items:center;gap:14px;padding:12px 22px;border-bottom:1.5px solid rgba(31,29,24,.35)">
+          <span style="font-family:'Instrument Serif',serif;font-size:17px">Alex Gomez</span>
+          <span style="margin-left:auto;display:flex;gap:12px;font-size:11px;font-weight:500;color:#625d50"><span>Projects</span><span>Résumé</span></span>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center;padding:26px 26px 30px">
+          <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+            <div style="width:54px;height:54px;padding:4px;background:#fff;transform:rotate(-4deg);box-shadow:0 4px 8px rgba(0,0,0,.15)"><div style="height:100%;background:repeating-linear-gradient(135deg,#e7e3d6 0 5px,#efece2 5px 10px)"></div></div>
+            <span style="font-family:'Instrument Serif',serif;font-size:30px;line-height:1">Alex Gomez</span>
+            <span style="width:110px;height:3px;border-radius:2px;background:#a2440a"></span>
+            <div style="display:flex;flex-direction:column;gap:5px;width:100%"><span style="height:5px;border-radius:3px;background:rgba(31,29,24,.18)"></span><span style="height:5px;width:80%;border-radius:3px;background:rgba(31,29,24,.18)"></span></div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;font-family:Caveat,cursive">
+            <div style="width:90px;padding:8px;background:#d9d0a0;transform:rotate(-3deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">Software Certification Tracker</div>
+            <div style="width:90px;padding:8px;margin-top:10px;background:#bccdc8;transform:rotate(2deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">Embedded Reprogramming Tool</div>
+            <div style="width:90px;padding:8px;background:#e3c2a4;transform:rotate(-1.5deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">RecipeFlow</div>
+          </div>
+        </div>
+        <div style="padding:0 26px;display:flex;flex-direction:column;gap:6px">
+          <span style="font-family:'Instrument Serif',serif;font-size:24px;line-height:1">Projects</span>
+          <span style="width:70px;height:3px;border-radius:2px;background:#a2440a"></span>
+        </div>
+        <div style="padding:20px 26px 26px;display:flex;flex-direction:column;gap:24px">
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <span style="font-family:Caveat,cursive;font-size:17px;color:#625d50">at Collins Aerospace</span>
+            <div style="display:flex;flex-direction:column;border-left:1.5px solid rgba(162,68,10,.5);margin-left:4px">
+              <div style="display:grid;grid-template-columns:minmax(0,1fr) 110px;gap:14px;align-items:center;padding:0 0 16px 16px">
+                <div style="display:flex;flex-direction:column;gap:5px"><span style="font-family:Caveat,cursive;font-size:14px;color:#a2440a;line-height:1">Summer 2026</span><span style="font-family:'Instrument Serif',serif;font-size:16px;line-height:1.1">Software Certification Tracker</span><span style="height:5px;width:90%;border-radius:3px;background:rgba(31,29,24,.18)"></span><span style="font-family:Caveat,cursive;font-size:16px;color:#a2440a">read the full story →</span></div><div style="height:66px;background:#d9d0a0;transform:rotate(1.5deg);box-shadow:0 6px 12px rgba(0,0,0,.12);display:grid;place-items:center;font-family:Caveat,cursive;font-size:15px">hero sketch</div>
+              </div>
+              <div style="display:grid;grid-template-columns:minmax(0,1fr) 110px;gap:14px;align-items:center;padding:0 0 0 16px">
+                <div style="display:flex;flex-direction:column;gap:5px"><span style="font-family:Caveat,cursive;font-size:14px;color:#a2440a;line-height:1">Summer 2025</span><span style="font-family:'Instrument Serif',serif;font-size:16px;line-height:1.1">Embedded Reprogramming Tool</span><span style="height:5px;width:80%;border-radius:3px;background:rgba(31,29,24,.18)"></span><span style="font-family:Caveat,cursive;font-size:16px;color:#a2440a">read the full story →</span></div><div style="height:66px;background:#bccdc8;transform:rotate(-1.5deg);box-shadow:0 6px 12px rgba(0,0,0,.12);display:grid;place-items:center;font-family:Caveat,cursive;font-size:15px">hero sketch</div>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px;padding-top:18px;border-top:1.5px dashed rgba(31,29,24,.2)">
+            <span style="font-family:Caveat,cursive;font-size:17px;color:#625d50">on my own</span>
+            <div style="display:grid;grid-template-columns:minmax(0,1fr) 130px;gap:14px;align-items:center">
+              <div style="display:flex;flex-direction:column;gap:5px"><span style="font-family:'Instrument Serif',serif;font-size:16px;line-height:1.1">RecipeFlow</span><span style="height:5px;border-radius:3px;background:rgba(31,29,24,.18)"></span><span style="height:5px;width:70%;border-radius:3px;background:rgba(31,29,24,.18)"></span><span style="font-family:Caveat,cursive;font-size:16px;color:#a2440a">read the full story →</span></div>
+              <div style="display:flex;justify-content:center;gap:8px"><div style="width:50px;padding:3px 3px 8px;background:#fff;transform:rotate(-3deg);box-shadow:0 4px 8px rgba(0,0,0,.15)"><div style="aspect-ratio:9/19;background:repeating-linear-gradient(135deg,#e7e3d6 0 5px,#efece2 5px 10px)"></div></div><div style="width:50px;margin-top:10px;padding:3px 3px 8px;background:#fff;transform:rotate(2deg);box-shadow:0 4px 8px rgba(0,0,0,.15)"><div style="aspect-ratio:9/19;background:repeating-linear-gradient(135deg,#e7e3d6 0 5px,#efece2 5px 10px)"></div></div></div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;padding:16px 26px 0;border-top:1.5px solid rgba(31,29,24,.35);margin:0 0 0">
+          <span style="font-family:'Instrument Serif',serif;font-size:18px">Alex Gomez</span>
+          <span style="display:flex;gap:10px;font-size:10px;font-weight:500"><span>Email</span><span>Résumé</span><span>LinkedIn</span><span>GitHub</span></span>
+        </div>
+      </div>
+      <span style="font-family:Caveat,cursive;font-size:16px;color:#8a2f00;max-width:500px;line-height:1.2">Separates work from personal projects. The red timeline line shows the two summers in order.</span>
+    </div>
+
+  </div>
+  <p class="dv-next">Try next: "<a class="dv-oid" href="#2c">2c</a> with the problem/built/result lines from <a class="dv-oid" href="#2b">2b</a>" · "build <a class="dv-oid" href="#2a">2a</a> in hi-fi"</p>
+</section>
+
+<section class="dv-turn" id="t1">
+  <div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Home page now that each project has its own detail page. Header, hero and footer stay as they are today; only the Projects section changes.</span></div>
+  <div class="dv-opts">
+
+    <!-- 1a -->
+    <div class="dv-opt" id="1a">
+      <div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Same rows as today, trimmed to a short summary + link</div>
+      <div class="dv-card" style="width:500px;padding:0 0 22px">
+        <div style="display:flex;align-items:center;gap:14px;padding:12px 22px;border-bottom:1.5px solid rgba(31,29,24,.35)">
+          <span style="font-family:'Instrument Serif',serif;font-size:17px">Alex Gomez</span>
+          <span style="margin-left:auto;display:flex;gap:12px;font-size:11px;font-weight:500;color:#625d50"><span>Projects</span><span>Résumé</span></span>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center;padding:26px 26px 30px">
+          <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+            <div style="width:54px;height:54px;padding:4px;background:#fff;transform:rotate(-4deg);box-shadow:0 4px 8px rgba(0,0,0,.15)"><div style="height:100%;background:repeating-linear-gradient(135deg,#e7e3d6 0 5px,#efece2 5px 10px)"></div></div>
+            <span style="font-family:'Instrument Serif',serif;font-size:30px;line-height:1">Alex Gomez</span>
+            <span style="width:110px;height:3px;border-radius:2px;background:#a2440a"></span>
+            <div style="display:flex;flex-direction:column;gap:5px;width:100%"><span style="height:5px;border-radius:3px;background:rgba(31,29,24,.18)"></span><span style="height:5px;width:80%;border-radius:3px;background:rgba(31,29,24,.18)"></span></div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;font-family:Caveat,cursive">
+            <div style="width:90px;padding:8px;background:#d9d0a0;transform:rotate(-3deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">Software Certification Tracker</div>
+            <div style="width:90px;padding:8px;margin-top:10px;background:#bccdc8;transform:rotate(2deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">Embedded Reprogramming Tool</div>
+            <div style="width:90px;padding:8px;background:#e3c2a4;transform:rotate(-1.5deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">RecipeFlow</div>
+          </div>
+        </div>
+        <div style="padding:0 26px;display:flex;flex-direction:column;gap:6px">
+          <span style="font-family:'Instrument Serif',serif;font-size:24px;line-height:1">Projects</span>
+          <span style="width:70px;height:3px;border-radius:2px;background:#a2440a"></span>
+        </div>
+        <div style="padding:0 26px;display:flex;flex-direction:column">
+          <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:20px;align-items:center;padding:20px 0">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-family:'Instrument Serif',serif;font-size:18px;line-height:1.1">Software Certification Tracker</span>
+              <span style="font-family:Caveat,cursive;font-size:14px;color:#a2440a;line-height:1">Collins Aerospace - Summer 2026</span>
+              <span style="height:5px;border-radius:3px;background:rgba(31,29,24,.18)"></span><span style="height:5px;width:75%;border-radius:3px;background:rgba(31,29,24,.18)"></span>
+              <span style="font-size:11px;font-weight:700;margin-top:2px">Lookups went from 20 min to 2.</span>
+              <span style="font-family:Caveat,cursive;font-size:16px;color:#a2440a">read the full story →</span>
+            </div>
+            <div style="height:100px;background:#d9d0a0;transform:rotate(1.5deg);box-shadow:0 6px 12px rgba(0,0,0,.12);display:grid;place-items:center;font-family:Caveat,cursive;font-size:15px">hero sketch</div>
+          </div>
+          <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:20px;align-items:center;padding:20px 0;border-top:1.5px dashed rgba(31,29,24,.2)">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-family:'Instrument Serif',serif;font-size:18px;line-height:1.1">Embedded Reprogramming Tool</span>
+              <span style="font-family:Caveat,cursive;font-size:14px;color:#a2440a;line-height:1">Collins Aerospace - Summer 2025</span>
+              <span style="height:5px;border-radius:3px;background:rgba(31,29,24,.18)"></span><span style="height:5px;width:65%;border-radius:3px;background:rgba(31,29,24,.18)"></span>
+              <span style="font-family:Caveat,cursive;font-size:16px;color:#a2440a">read the full story →</span>
+            </div>
+            <div style="height:100px;background:#bccdc8;transform:rotate(-1.2deg);box-shadow:0 6px 12px rgba(0,0,0,.12);display:grid;place-items:center;font-family:Caveat,cursive;font-size:15px">hero sketch</div>
+          </div>
+          <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:20px;align-items:center;padding:20px 0;border-top:1.5px dashed rgba(31,29,24,.2)">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-family:'Instrument Serif',serif;font-size:18px;line-height:1.1">RecipeFlow</span>
+              <span style="font-family:Caveat,cursive;font-size:14px;color:#a2440a;line-height:1">Personal project</span>
+              <span style="height:5px;border-radius:3px;background:rgba(31,29,24,.18)"></span><span style="height:5px;width:70%;border-radius:3px;background:rgba(31,29,24,.18)"></span>
+              <span style="font-family:Caveat,cursive;font-size:16px;color:#a2440a">read the full story →</span>
+            </div>
+            <div style="display:flex;justify-content:center;gap:10px">
+              <div style="width:54px;padding:3px 3px 8px;background:#fff;transform:rotate(-3deg);box-shadow:0 4px 8px rgba(0,0,0,.15)"><div style="aspect-ratio:9/19;background:repeating-linear-gradient(135deg,#e7e3d6 0 5px,#efece2 5px 10px)"></div></div>
+              <div style="width:54px;margin-top:10px;padding:3px 3px 8px;background:#fff;transform:rotate(2deg);box-shadow:0 4px 8px rgba(0,0,0,.15)"><div style="aspect-ratio:9/19;background:repeating-linear-gradient(135deg,#e7e3d6 0 5px,#efece2 5px 10px)"></div></div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;padding:16px 26px 0;border-top:1.5px solid rgba(31,29,24,.35);margin:0 0 0">
+          <span style="font-family:'Instrument Serif',serif;font-size:18px">Alex Gomez</span>
+          <span style="display:flex;gap:10px;font-size:10px;font-weight:500"><span>Email</span><span>Résumé</span><span>LinkedIn</span><span>GitHub</span></span>
+        </div>
+      </div>
+      <span style="font-family:Caveat,cursive;font-size:16px;color:#8a2f00;max-width:500px;line-height:1.2">The feature lists move to the detail pages. Each row keeps one summary line, one result, and a link.</span>
+    </div>
+
+    <!-- 1b -->
+    <div class="dv-opt" id="1b">
+      <div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Three paper cards in a row</div>
+      <div class="dv-card" style="width:500px;padding:0 0 22px">
+        <div style="display:flex;align-items:center;gap:14px;padding:12px 22px;border-bottom:1.5px solid rgba(31,29,24,.35)">
+          <span style="font-family:'Instrument Serif',serif;font-size:17px">Alex Gomez</span>
+          <span style="margin-left:auto;display:flex;gap:12px;font-size:11px;font-weight:500;color:#625d50"><span>Projects</span><span>Résumé</span></span>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center;padding:26px 26px 30px">
+          <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+            <div style="width:54px;height:54px;padding:4px;background:#fff;transform:rotate(-4deg);box-shadow:0 4px 8px rgba(0,0,0,.15)"><div style="height:100%;background:repeating-linear-gradient(135deg,#e7e3d6 0 5px,#efece2 5px 10px)"></div></div>
+            <span style="font-family:'Instrument Serif',serif;font-size:30px;line-height:1">Alex Gomez</span>
+            <span style="width:110px;height:3px;border-radius:2px;background:#a2440a"></span>
+            <div style="display:flex;flex-direction:column;gap:5px;width:100%"><span style="height:5px;border-radius:3px;background:rgba(31,29,24,.18)"></span><span style="height:5px;width:80%;border-radius:3px;background:rgba(31,29,24,.18)"></span></div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;font-family:Caveat,cursive">
+            <div style="width:90px;padding:8px;background:#d9d0a0;transform:rotate(-3deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">Software Certification Tracker</div>
+            <div style="width:90px;padding:8px;margin-top:10px;background:#bccdc8;transform:rotate(2deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">Embedded Reprogramming Tool</div>
+            <div style="width:90px;padding:8px;background:#e3c2a4;transform:rotate(-1.5deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">RecipeFlow</div>
+          </div>
+        </div>
+        <div style="padding:0 26px;display:flex;flex-direction:column;gap:6px">
+          <span style="font-family:'Instrument Serif',serif;font-size:24px;line-height:1">Projects</span>
+          <span style="width:70px;height:3px;border-radius:2px;background:#a2440a"></span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;padding:26px 26px 28px">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="position:relative;height:84px;background:#d9d0a0;transform:rotate(-1.5deg);box-shadow:0 5px 10px rgba(0,0,0,.12);display:grid;place-items:center;font-family:Caveat,cursive;font-size:14px"><div style="position:absolute;top:-7px;left:50%;width:40px;height:13px;background:rgba(255,255,255,.6);transform:translateX(-50%) rotate(3deg)"></div>sketch</div>
+            <span style="font-family:'Instrument Serif',serif;font-size:15px;line-height:1.1;margin-top:4px">Software Certification Tracker</span>
+            <span style="font-family:Caveat,cursive;font-size:13px;color:#a2440a;line-height:1">Collins, 2026</span>
+            <span style="height:4px;border-radius:2px;background:rgba(31,29,24,.18)"></span><span style="height:4px;width:70%;border-radius:2px;background:rgba(31,29,24,.18)"></span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="position:relative;height:84px;background:#bccdc8;transform:rotate(1deg);box-shadow:0 5px 10px rgba(0,0,0,.12);display:grid;place-items:center;font-family:Caveat,cursive;font-size:14px"><div style="position:absolute;top:-7px;left:40%;width:40px;height:13px;background:rgba(255,255,255,.6);transform:translateX(-50%) rotate(-3deg)"></div>sketch</div>
+            <span style="font-family:'Instrument Serif',serif;font-size:15px;line-height:1.1;margin-top:4px">Embedded Reprogramming Tool</span>
+            <span style="font-family:Caveat,cursive;font-size:13px;color:#a2440a;line-height:1">Collins, 2025</span>
+            <span style="height:4px;border-radius:2px;background:rgba(31,29,24,.18)"></span><span style="height:4px;width:60%;border-radius:2px;background:rgba(31,29,24,.18)"></span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="position:relative;height:84px;background:#e3c2a4;transform:rotate(-.8deg);box-shadow:0 5px 10px rgba(0,0,0,.12);display:flex;justify-content:center;align-items:center;gap:6px"><div style="position:absolute;top:-7px;left:60%;width:40px;height:13px;background:rgba(255,255,255,.6);transform:translateX(-50%) rotate(2deg)"></div><div style="width:28px;padding:2px 2px 5px;background:#fff;transform:rotate(-3deg)"><div style="aspect-ratio:9/19;background:repeating-linear-gradient(135deg,#e7e3d6 0 4px,#efece2 4px 8px)"></div></div><div style="width:28px;padding:2px 2px 5px;background:#fff;transform:rotate(2deg)"><div style="aspect-ratio:9/19;background:repeating-linear-gradient(135deg,#e7e3d6 0 4px,#efece2 4px 8px)"></div></div></div>
+            <span style="font-family:'Instrument Serif',serif;font-size:15px;line-height:1.1;margin-top:4px">RecipeFlow</span>
+            <span style="font-family:Caveat,cursive;font-size:13px;color:#a2440a;line-height:1">My own app</span>
+            <span style="height:4px;border-radius:2px;background:rgba(31,29,24,.18)"></span><span style="height:4px;width:75%;border-radius:2px;background:rgba(31,29,24,.18)"></span>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;padding:16px 26px 0;border-top:1.5px solid rgba(31,29,24,.35)">
+          <span style="font-family:'Instrument Serif',serif;font-size:18px">Alex Gomez</span>
+          <span style="display:flex;gap:10px;font-size:10px;font-weight:500"><span>Email</span><span>Résumé</span><span>LinkedIn</span><span>GitHub</span></span>
+        </div>
+      </div>
+      <span style="font-family:Caveat,cursive;font-size:16px;color:#8a2f00;max-width:500px;line-height:1.2">The whole card is the link. Short page, all three projects visible at once. Stacks to one column on phones.</span>
+    </div>
+
+    <!-- 1c -->
+    <div class="dv-opt" id="1c">
+      <div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Index list: one line per project, sketch on the right</div>
+      <div class="dv-card" style="width:500px;padding:0 0 22px">
+        <div style="display:flex;align-items:center;gap:14px;padding:12px 22px;border-bottom:1.5px solid rgba(31,29,24,.35)">
+          <span style="font-family:'Instrument Serif',serif;font-size:17px">Alex Gomez</span>
+          <span style="margin-left:auto;display:flex;gap:12px;font-size:11px;font-weight:500;color:#625d50"><span>Projects</span><span>Résumé</span></span>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center;padding:26px 26px 30px">
+          <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+            <div style="width:54px;height:54px;padding:4px;background:#fff;transform:rotate(-4deg);box-shadow:0 4px 8px rgba(0,0,0,.15)"><div style="height:100%;background:repeating-linear-gradient(135deg,#e7e3d6 0 5px,#efece2 5px 10px)"></div></div>
+            <span style="font-family:'Instrument Serif',serif;font-size:30px;line-height:1">Alex Gomez</span>
+            <span style="width:110px;height:3px;border-radius:2px;background:#a2440a"></span>
+            <div style="display:flex;flex-direction:column;gap:5px;width:100%"><span style="height:5px;border-radius:3px;background:rgba(31,29,24,.18)"></span><span style="height:5px;width:80%;border-radius:3px;background:rgba(31,29,24,.18)"></span></div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;font-family:Caveat,cursive">
+            <div style="width:90px;padding:8px;background:#d9d0a0;transform:rotate(-3deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">Software Certification Tracker</div>
+            <div style="width:90px;padding:8px;margin-top:10px;background:#bccdc8;transform:rotate(2deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">Embedded Reprogramming Tool</div>
+            <div style="width:90px;padding:8px;background:#e3c2a4;transform:rotate(-1.5deg);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px;line-height:1.05">RecipeFlow</div>
+          </div>
+        </div>
+        <div style="padding:0 26px;display:flex;flex-direction:column;gap:6px">
+          <span style="font-family:'Instrument Serif',serif;font-size:24px;line-height:1">Projects</span>
+          <span style="width:70px;height:3px;border-radius:2px;background:#a2440a"></span>
+        </div>
+        <div style="padding:14px 26px 24px;display:flex;flex-direction:column">
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) 90px;gap:16px;align-items:center;padding:14px 0;border-bottom:1.5px dashed rgba(31,29,24,.2)">
+            <div style="display:flex;flex-direction:column;gap:4px"><div style="display:flex;align-items:baseline;gap:10px"><span style="font-family:'Instrument Serif',serif;font-size:18px;line-height:1.1">Software Certification Tracker</span><span style="font-family:Caveat,cursive;font-size:14px;color:#a2440a">2026</span></div><span style="height:5px;width:85%;border-radius:3px;background:rgba(31,29,24,.18)"></span></div>
+            <div style="height:56px;background:#d9d0a0;transform:rotate(2deg);box-shadow:0 4px 8px rgba(0,0,0,.12)"></div>
+          </div>
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) 90px;gap:16px;align-items:center;padding:14px 0;border-bottom:1.5px dashed rgba(31,29,24,.2)">
+            <div style="display:flex;flex-direction:column;gap:4px"><div style="display:flex;align-items:baseline;gap:10px"><span style="font-family:'Instrument Serif',serif;font-size:18px;line-height:1.1">Embedded Reprogramming Tool</span><span style="font-family:Caveat,cursive;font-size:14px;color:#a2440a">2025</span></div><span style="height:5px;width:75%;border-radius:3px;background:rgba(31,29,24,.18)"></span></div>
+            <div style="height:56px;background:#bccdc8;transform:rotate(-2deg);box-shadow:0 4px 8px rgba(0,0,0,.12)"></div>
+          </div>
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) 90px;gap:16px;align-items:center;padding:14px 0">
+            <div style="display:flex;flex-direction:column;gap:4px"><div style="display:flex;align-items:baseline;gap:10px"><span style="font-family:'Instrument Serif',serif;font-size:18px;line-height:1.1">RecipeFlow</span><span style="font-family:Caveat,cursive;font-size:14px;color:#a2440a">now</span></div><span style="height:5px;width:80%;border-radius:3px;background:rgba(31,29,24,.18)"></span></div>
+            <div style="height:56px;background:#e3c2a4;transform:rotate(1.5deg);box-shadow:0 4px 8px rgba(0,0,0,.12)"></div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;padding:16px 26px 0;border-top:1.5px solid rgba(31,29,24,.35)">
+          <span style="font-family:'Instrument Serif',serif;font-size:18px">Alex Gomez</span>
+          <span style="display:flex;gap:10px;font-size:10px;font-weight:500"><span>Email</span><span>Résumé</span><span>LinkedIn</span><span>GitHub</span></span>
+        </div>
+      </div>
+      <span style="font-family:Caveat,cursive;font-size:16px;color:#8a2f00;max-width:500px;line-height:1.2">Quietest option. Room to add more projects later without the page getting long.</span>
+    </div>
+
+    <!-- 1d -->
+    <div class="dv-opt" id="1d">
+      <div class="dv-olabel"><a class="dv-oid" href="#1d">1d</a>No Projects section: the hero notes are the links</div>
+      <div class="dv-card" style="width:500px;padding:0 0 22px">
+        <div style="display:flex;align-items:center;gap:14px;padding:12px 22px;border-bottom:1.5px solid rgba(31,29,24,.35)">
+          <span style="font-family:'Instrument Serif',serif;font-size:17px">Alex Gomez</span>
+          <span style="margin-left:auto;display:flex;gap:12px;font-size:11px;font-weight:500;color:#625d50"><span>Résumé</span></span>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center;padding:60px 26px 64px">
+          <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+            <div style="width:54px;height:54px;padding:4px;background:#fff;transform:rotate(-4deg);box-shadow:0 4px 8px rgba(0,0,0,.15)"><div style="height:100%;background:repeating-linear-gradient(135deg,#e7e3d6 0 5px,#efece2 5px 10px)"></div></div>
+            <span style="font-family:'Instrument Serif',serif;font-size:30px;line-height:1">Alex Gomez</span>
+            <span style="width:110px;height:3px;border-radius:2px;background:#a2440a"></span>
+            <div style="display:flex;flex-direction:column;gap:5px;width:100%"><span style="height:5px;border-radius:3px;background:rgba(31,29,24,.18)"></span><span style="height:5px;width:80%;border-radius:3px;background:rgba(31,29,24,.18)"></span></div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:14px;font-family:Caveat,cursive">
+            <div style="width:150px;padding:10px 12px;background:#d9d0a0;transform:rotate(-3deg);box-shadow:0 4px 8px rgba(0,0,0,.15)"><div style="font-size:16px;line-height:1.05">Software Certification Tracker</div><div style="font-size:12px;opacity:.75;margin-top:3px">Collins Aerospace, Summer 2026</div></div>
+            <div style="width:150px;padding:10px 12px;background:#bccdc8;transform:rotate(2deg);box-shadow:0 4px 8px rgba(0,0,0,.15)"><div style="font-size:16px;line-height:1.05">Embedded Reprogramming Tool</div><div style="font-size:12px;opacity:.75;margin-top:3px">Collins Aerospace, Summer 2025</div></div>
+            <div style="width:150px;padding:10px 12px;background:#e3c2a4;transform:rotate(-1.5deg);box-shadow:0 4px 8px rgba(0,0,0,.15)"><div style="font-size:16px;line-height:1.05">RecipeFlow</div><div style="font-size:12px;opacity:.75;margin-top:3px">My own app</div></div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;padding:16px 26px 0;border-top:1.5px solid rgba(31,29,24,.35)">
+          <span style="font-family:'Instrument Serif',serif;font-size:18px">Alex Gomez</span>
+          <span style="display:flex;gap:10px;font-size:10px;font-weight:500"><span>Email</span><span>Résumé</span><span>LinkedIn</span><span>GitHub</span></span>
+        </div>
+      </div>
+      <span style="font-family:Caveat,cursive;font-size:16px;color:#8a2f00;max-width:500px;line-height:1.2">Each note opens its detail page. One screen, nothing to scroll. Drop "Projects" from the header nav.</span>
+    </div>
+
+  </div>
+  <p class="dv-next">Try next: "build <a class="dv-oid" href="#1a">1a</a> in hi-fi with the real copy" · "<a class="dv-oid" href="#1b">1b</a> on mobile" · "add an About section under <a class="dv-oid" href="#1d">1d</a>"</p>
+</section>
+</x-dc>
+</body>
+</html>

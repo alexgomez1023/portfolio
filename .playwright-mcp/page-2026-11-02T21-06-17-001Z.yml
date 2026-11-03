@@ -1,0 +1,51 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - link "Alex Gomez" [ref=e4] [cursor=pointer]:
+      - /url: /
+    - navigation "Main" [ref=e7]:
+      - list [ref=e8]:
+        - listitem [ref=e9]:
+          - link "Projects" [ref=e10] [cursor=pointer]:
+            - /url: /#projects
+        - listitem [ref=e13]:
+          - link "Résumé" [ref=e14] [cursor=pointer]:
+            - /url: /resume
+    - generic [ref=e17]:
+      - link "LinkedIn" [ref=e18] [cursor=pointer]:
+        - /url: https://www.linkedin.com/in/alex-gomez-b476a02b5/
+      - link "GitHub" [ref=e25] [cursor=pointer]:
+        - /url: https://github.com/alexgomez1023
+      - button "Switch to dark theme" [ref=e29] [cursor=pointer]
+  - main [ref=e33]:
+    - generic [ref=e37]: "404"
+    - heading "Nothing pinned here." [level=1] [ref=e38]
+    - navigation "Where to go instead" [ref=e39]:
+      - link "Back to the board home" [ref=e40] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e41]: Back to the board
+        - generic [ref=e42]: home
+      - link "My projects See what I've built" [ref=e43] [cursor=pointer]:
+        - /url: /#projects
+        - generic [ref=e44]: My projects
+        - generic [ref=e45]: See what I've built
+      - link "Read my résumé please :)" [ref=e46] [cursor=pointer]:
+        - /url: /resume
+        - generic [ref=e47]: Read my résumé
+        - generic [ref=e48]: please :)
+  - contentinfo [ref=e62]:
+    - generic [ref=e63]:
+      - paragraph [ref=e64]: Alex Gomez
+      - paragraph [ref=e65]: Raleigh, North Carolina. I built this website using React and CSS.
+    - list [ref=e66]:
+      - listitem [ref=e67]:
+        - link "Email" [ref=e68] [cursor=pointer]:
+          - /url: mailto:alex.m.gomez10@gmail.com
+      - listitem [ref=e71]:
+        - link "Résumé" [ref=e72] [cursor=pointer]:
+          - /url: /resume
+      - listitem [ref=e75]:
+        - link "LinkedIn" [ref=e76] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/alex-gomez-b476a02b5/
+      - listitem [ref=e79]:
+        - link "GitHub" [ref=e80] [cursor=pointer]:
+          - /url: https://github.com/alexgomez1023

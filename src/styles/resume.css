@@ -1,0 +1,241 @@
+.resume-page {
+  padding: 40px var(--gutter) 72px;
+}
+
+/* Back link and download button */
+.resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto 36px;
+  font-weight: 500;
+}
+.resume-actions .download {
+  padding: 6px 18px;
+  border: 1.5px solid var(--ink);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+}
+.resume-actions .download:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.resume-actions .download .scrib {
+  display: none;
+}
+
+/* The sheet */
+/* the paper stays light in dark mode, so I pin the text colors here */
+.resume-sheet {
+  --ink: var(--note-ink);
+  --muted: #5a554a;
+  --accent: var(--pen-red);
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 56px 60px 52px;
+  background: #fdfbf3;
+  color: var(--ink);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.resume-sheet::before {
+  /* tape */
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  width: 110px;
+  height: 26px;
+  transform: translateX(-50%) rotate(-2deg);
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.resume-sheet::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  filter: url(#paper);
+  mix-blend-mode: multiply;
+  opacity: 0.4;
+}
+.resume-sheet p,
+.resume-sheet ul,
+.resume-sheet dl,
+.resume-sheet dd {
+  margin: 0;
+}
+
+/* Name and contact line */
+.resume-head {
+  text-align: center;
+}
+.resume-head h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 6vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--accent);
+}
+.resume-sheet .contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 0;
+  margin-top: 12px;
+}
+.contact li + li::before {
+  content: "·";
+  margin: 0 10px;
+  color: var(--muted);
+}
+
+/* Sections */
+.resume-sheet h2 {
+  margin: 30px 0 14px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--accent);
+}
+.resume-sheet h2::after {
+  content: "";
+  display: block;
+  height: 10px;
+  margin-top: 4px;
+  background: var(--accent);
+  opacity: 0.55;
+  -webkit-mask: var(--squiggle) repeat-x left center;
+  mask: var(--squiggle) repeat-x left center;
+}
+
+/* Entries */
+.entry + .entry {
+  margin-top: 18px;
+}
+.entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0 20px;
+}
+.resume-sheet h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.entry-date {
+  font-weight: 500;
+  white-space: nowrap;
+}
+.entry-sub {
+  color: var(--muted);
+  font-style: italic;
+}
+.entry ul {
+  margin-top: 6px;
+  padding-left: 20px;
+  list-style: disc;
+}
+.entry li + li {
+  margin-top: 3px;
+}
+
+/* Skills */
+.skills {
+  display: grid;
+  gap: 4px;
+}
+.skills div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 8px;
+}
+.skills dt {
+  font-weight: 700;
+}
+.skills dt::after {
+  content: ":";
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .resume-page {
+    padding-top: 28px;
+  }
+  .resume-sheet {
+    padding: 40px 22px 36px;
+  }
+}
+
+/* so I can print the page as a normal one page resume */
+@media print {
+  @page {
+    margin: 0.5in;
+  }
+  body {
+    display: block;
+    min-height: 0;
+    background: #fff;
+    font-size: 9.5pt;
+  }
+  body::before,
+  .site-header,
+  .site-footer,
+  .resume-actions,
+  .resume-sheet::before,
+  .resume-sheet::after,
+  .scrib {
+    display: none !important;
+  }
+  .resume-page {
+    padding: 0;
+  }
+  .resume-sheet {
+    --ink: #000;
+    --muted: #333;
+    max-width: none;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    font-size: 9.5pt;
+    line-height: 1.35;
+  }
+  .resume-head h1 {
+    font-size: 24pt;
+  }
+  .resume-sheet .contact {
+    margin-top: 6pt;
+  }
+  .resume-sheet h2 {
+    margin: 10pt 0 5pt;
+    font-size: 13pt;
+  }
+  .resume-sheet h2::after {
+    height: 6px;
+    margin-top: 1pt;
+  }
+  .resume-sheet h3 {
+    font-size: 10pt;
+  }
+  .entry {
+    break-inside: avoid;
+  }
+  .entry + .entry {
+    margin-top: 7pt;
+  }
+  .entry ul {
+    margin-top: 2pt;
+  }
+  .entry li + li {
+    margin-top: 1pt;
+  }
+}
