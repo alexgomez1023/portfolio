@@ -13,6 +13,11 @@ export default function Home() {
   return (
     <main>
       <title>Alex Gomez</title>
+      <meta
+        name="description"
+        content="Alex Gomez, computer science senior at NC State. Software engineering intern at Collins Aerospace and builder of Skim."
+      />
+      <link rel="canonical" href="https://alexmgomez.com/" />
 
       <section className="hero">
         <div className="me">
@@ -57,7 +62,7 @@ export default function Home() {
           />
           <Note
             to="/projects/skim"
-            title="Skim"
+            title="Skim: Recipe Saver and Meal Prep Assistant"
             meta="My own app"
             index={2}
             paper="peach"

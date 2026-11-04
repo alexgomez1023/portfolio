@@ -4,10 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alex Gomez</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- each page sets its own description (Home.jsx, Resume.jsx, ProjectPage.jsx) -->
+    <meta name="theme-color" content="#f4f1e6" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1b1915" media="(prefers-color-scheme: dark)" />
+
+    <!-- link previews (LinkedIn, iMessage, Slack...). These crawlers don't run
+         JS, so they have to live here, not in the React pages. og.png is made
+         from docs/og-image.html -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Alex Gomez" />
+    <meta property="og:title" content="Alex Gomez" />
     <meta
-      name="description"
-      content="Alex Gomez, computer science senior at NC State. Software engineering intern at Collins Aerospace and builder of Skim."
+      property="og:description"
+      content="Computer science senior at NC State. Software engineering intern at Collins Aerospace and builder of Skim."
     />
+    <meta property="og:url" content="https://alexmgomez.com/" />
+    <meta property="og:image" content="https://alexmgomez.com/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Alex Gomez, CS at NC State, with sticky notes for Skim, Cert Tracker and Reprogramming Tool"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- tells Google who the site is about -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alex Gomez",
+        "url": "https://alexmgomez.com/",
+        "jobTitle": "Computer Science Student",
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "North Carolina State University"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/alex-gomez-b476a02b5/",
+          "https://github.com/alexgomez1023"
+        ]
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

@@ -4,6 +4,8 @@ export default function NotFound() {
   return (
     <main className="not-found">
       <title>Not found | Alex Gomez</title>
+      {/* Vercel serves every unknown URL with a 200, so tell search engines to skip it */}
+      <meta name="robots" content="noindex" />
 
       {/* the spot where a note used to be: two leftover bits of tape */}
       <div className="empty-spot" aria-hidden="true">

@@ -7,6 +7,7 @@ export default function Resume() {
   return (
     <main className="resume-page">
       <title>Résumé | Alex Gomez</title>
+      <link rel="canonical" href="https://alexmgomez.com/resume" />
       <meta
         name="description"
         content="Résumé of Alex Gomez: computer science at NC State (AI concentration), two software engineering internships at Collins Aerospace."

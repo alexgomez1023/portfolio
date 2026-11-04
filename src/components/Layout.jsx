@@ -3,6 +3,7 @@ import { Outlet, useLocation } from "react-router";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import { SvgDefs } from "./Icons.jsx";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Layout() {
   const { pathname, hash } = useLocation();
@@ -25,6 +26,7 @@ export default function Layout() {
       <Header />
       <Outlet />
       <Footer />
+      <Analytics />
     </>
   );
 }

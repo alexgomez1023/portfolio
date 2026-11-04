@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import Arrow from "./SquigglyArrow.jsx";
 import ScribLink from "./ScribLink.jsx";
 
@@ -14,10 +14,12 @@ import ScribLink from "./ScribLink.jsx";
 //   <Sketch .../>  <Facts>...</Facts>  <Question>...</Question> ...
 // </ProjectPage>
 export default function ProjectPage({ title, subtitle, description, next, children }) {
+  const { pathname } = useLocation();
   return (
     <main className="project-page">
       <title>{`${title} | Alex Gomez`}</title>
       {description && <meta name="description" content={description} />}
+      <link rel="canonical" href={`https://alexmgomez.com${pathname}`} />
 
       <ScribLink to="/#projects" className="hand-link">
         <Arrow left /> all projects

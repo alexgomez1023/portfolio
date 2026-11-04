@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Add a <url> here whenever you add a route in src/App.jsx -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://alexmgomez.com/</loc></url>
+  <url><loc>https://alexmgomez.com/resume</loc></url>
+  <url><loc>https://alexmgomez.com/projects/skim</loc></url>
+  <url><loc>https://alexmgomez.com/projects/cert-tracker</loc></url>
+  <url><loc>https://alexmgomez.com/projects/reprogramming-tool</loc></url>
+  <url><loc>https://alexmgomez.com/resume.pdf</loc></url>
+</urlset>
