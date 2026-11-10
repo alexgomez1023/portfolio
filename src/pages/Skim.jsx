@@ -16,7 +16,7 @@ import { screenshots } from "../data/screenshots.js";
 export default function Skim() {
   return (
     <ProjectPage
-      title="Skim"
+      title="Skim: Recipe and Meal Planning"
       subtitle="Personal project"
       description="A recipe and meal planning app I'm building for iOS and Android."
       next={{
@@ -47,8 +47,8 @@ export default function Skim() {
           My mom cooks a lot and kept losing track of recipes saved across
           Instagram, YouTube, and recipe websites. Apps that solve this already
           exist, but most cost money, are slow to import recipes, and feel
-          clunky to use. Skim saves recipes from anywhere in one place and
-          turns them into a plan for the week.
+          clunky to use. Skim saves recipes from anywhere in one place and turns
+          them into a plan for the week.
         </p>
       </Question>
 
